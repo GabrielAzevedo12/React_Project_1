@@ -3,6 +3,8 @@ import './css/Main.css';
 import './css/titulo.css';
 import './css/aumentarAltura.css';
 import './css/diminuirAltura.css';
+import './css/deslocametoHeader_negativo.css'
+import './css/deslocametoHeader_positivo.css'
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
@@ -16,11 +18,11 @@ function Main() {
     if (scrollOld >= e.scrollHeight - e.scrollTop) {
       Footer.classList.add("aumentarAltura")
       Footer.classList.remove("diminuirAltura")
-      Header.classList.add("diminuirAltura")
-      Header.classList.remove("aumentarAltura")
+      Header.classList.add("deslocametoHeader_negativo")
+      Header.classList.remove("deslocametoHeader_positivo")
     } else {
-      Header.classList.add("aumentarAltura");
-      Header.classList.remove("diminuirAltura")
+      Header.classList.add("deslocametoHeader_positivo");
+      Header.classList.remove("deslocametoHeader_negativo")
       Footer.classList.add("diminuirAltura")
       Footer.classList.remove("aumentarAltura")
     }
