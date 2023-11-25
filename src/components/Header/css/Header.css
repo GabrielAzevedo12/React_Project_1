@@ -1,8 +1,16 @@
 @media only screen and (min-width: 1024px) {
 .Header {
     grid-area: Header;
-    min-height: 10vh;
+    max-width: 99vw;
     min-width: 99vw;
-    background-color: rgba(0, 0, 0, 0.473);
+    /*
+    max-height: 10vh;
+    min-height: 10vh;
+    */
+    background-color: rgba(5, 53, 116, 0.473);
+    z-index: 3;
+    display: flex;
+    position: fixed;
+    top: 0vh;
 }
 }

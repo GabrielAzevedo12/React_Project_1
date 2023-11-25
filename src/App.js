@@ -7,13 +7,15 @@ import Nav from './components/Nav/Nav';
 
 function App() {
   return (
-    <div className="App grid-container tamplate-column">
-      <Header/>
-      <Nav />
+    <div className="App tamplate-column">
       <Main />
-      <Footer />
     </div>
   );
 }
-
+/*
+<Header/>
+      <Nav />
+      <Main />
+      <Footer />
+*/
 export default App;

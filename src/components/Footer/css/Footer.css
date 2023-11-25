@@ -1,8 +1,19 @@
 @media only screen and (min-width: 1024px) {
 .Footer {
     grid-area: Footer;
-    min-height: 10vh;
+    max-width: 99vw;
     min-width: 99vw;
+    /*
+    min-height: 10vh;
+    max-height: 10vh;
+    */
     background-color: rgba(49, 110, 160, 0.473);
+    z-index: 3;
+    position: fixed;
+    top: 90vh;
+    /*
+    position: fixed;
+    z-index: 3;
+    */
 }
 }
