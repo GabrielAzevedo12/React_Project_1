@@ -6,7 +6,7 @@ import './css/Contact.css'
 const Contact = () => {
     const navigate = useNavigate();
     return (
-        <div className="div_contact flex-row center">
+        <div className="div_contact flex-column center">
          <h1>Contact</h1>
          <button onClick={() => navigate('/') } >Go to Home</button>
         </div>
