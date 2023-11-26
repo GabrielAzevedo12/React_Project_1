@@ -7,6 +7,7 @@ import './css/deslocametoHeader_negativo.css'
 import './css/deslocametoHeader_positivo.css'
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import { Adicionar_class, Remover_class, Existe_Class, S1, S2, $, new_text, def_dimensoes } from '../funçoes/funçoes'
 
 function Main() {
   var scrollOld = 0;
