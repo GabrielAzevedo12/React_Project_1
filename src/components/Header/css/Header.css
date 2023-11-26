@@ -3,11 +3,9 @@
     grid-area: Header;
     max-width: 99vw;
     min-width: 99vw;
-    /*
     max-height: 10vh;
     min-height: 10vh;
-    */
-    background-color: rgba(5, 53, 116, 0.473);
+    background-color: rgba(7, 108, 240, 0.473);
     z-index: 3;
     display: flex;
     position: fixed;

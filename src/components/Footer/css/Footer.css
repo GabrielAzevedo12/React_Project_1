@@ -3,11 +3,9 @@
     grid-area: Footer;
     max-width: 99vw;
     min-width: 99vw;
-    /*
     min-height: 10vh;
     max-height: 10vh;
-    */
-    background-color: rgba(49, 110, 160, 0.473);
+    background-color: rgba(49, 110, 160, 0.904);
     z-index: 3;
     position: fixed;
     top: 90vh;
