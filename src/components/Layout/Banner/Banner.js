@@ -9,7 +9,7 @@ import Banner4 from "./components/Banner4/Banner4";
 
 const Banner = () => { 
     return ( 
-          <div className="Banner_Container">
+          <div className="Banner_Container Banner">
             <Banner1/>
             <Banner2/>
             <Banner3/>

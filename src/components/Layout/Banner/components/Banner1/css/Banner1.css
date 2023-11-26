@@ -1,0 +1,6 @@
+.Banner1 {
+    grid-area: Banner1;
+    min-width: 100vw;
+    min-height: 30vh;
+    background-color: rgb(43, 32, 53);
+}

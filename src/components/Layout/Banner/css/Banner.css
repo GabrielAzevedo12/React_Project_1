@@ -1,0 +1,11 @@
+.Banner_Container {
+    display: grid;
+    grid-template-areas:
+    'Banner1 Banner1 Banner1 Banner1 Banner1 Banner1'
+    'Banner3 Banner2 Banner2 Banner2 Banner2 Banner2'
+    'Banner3 Banner4 Banner4 Banner4 Banner4 Banner4';
+    gap: 10px;
+    padding: 10px;
+  
+  }
+  

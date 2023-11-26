@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 //import FakeText from "../../FakeText/FakeText";
 import './css/Home_Container.css';
 import { esconder, exibir } from "../../funçoes/funçoes";
+import Banner from "../../Layout/Banner/Banner";
 const Home = () => {
   var scrollOld = 0;
   const
@@ -34,15 +35,18 @@ const Home = () => {
   };
   
     return ( 
-          <div className="Home_Container" onScroll={(e) => {
+          <div className="Home_Container center" onScroll={(e) => {
           ScrollMain_onScroll(e.target)
         }}>
-            <h1 className="titulo">Teste</h1>
-            <h1 className="titulo">Teste</h1>
-            <h1 className="titulo">Teste</h1>
-            <h1 className="titulo">Teste</h1>
+            <Banner/>
         </div>
         );
 }
 
+/*
+<h1 className="titulo">Teste</h1>
+            <h1 className="titulo">Teste</h1>
+            <h1 className="titulo">Teste</h1>
+            <h1 className="titulo">Teste</h1>
+*/
 export default Home

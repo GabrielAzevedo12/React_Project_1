@@ -9,8 +9,6 @@
         color: rgb(125, 125, 158);
         font-size: 5rem;
         z-index: 1;
-        align-items: center;
-        justify-content: center;
         overflow-y: scroll;
     }
   }
