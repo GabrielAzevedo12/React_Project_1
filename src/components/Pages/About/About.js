@@ -13,7 +13,6 @@ const About = ({ name }) => {
     const navigate = useNavigate();
     return (
         <>
-          { name !== 'John Doe' ? <Redirect to="/" /> : null }
           <h1>About { name }</h1>
         </>
         );

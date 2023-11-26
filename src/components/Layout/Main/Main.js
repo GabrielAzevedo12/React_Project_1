@@ -12,7 +12,7 @@ import { Adicionar_class, Remover_class, Existe_Class, S1, S2, $, new_text, def_
 import { BrowserRouter as Router, Route, Link, Routes, redirect as Redirect } from "react-router-dom";
 import React, { Fragment } from "react";
 import Home from '../../Pages/Home/Home';
-import Contact from '../../Pages/Contacts/Contacts';
+import Contact from '../../Pages/Contact/Contact';
 import About from '../../Pages/About/About';
 import Container from '../Container/Container';
 
