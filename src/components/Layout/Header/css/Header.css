@@ -10,5 +10,10 @@
     display: flex;
     position: fixed;
     top: 0vh;
+    justify-content: space-between;
+}
+.Logo_Header {
+    min-width: 10vw;
+    margin-top: 1rem;
 }
 }

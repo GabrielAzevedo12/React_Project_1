@@ -4,8 +4,16 @@
     /*
     max-height: 100vh;
     */
-    max-width: 9vw;
+    min-width: 40vw;
     background-color: rgb(69, 111, 150);
     color: rgb(155, 158, 125);
+}
+.div_nav {
+    justify-content: space-between;
+}
+.item_lista_nav {
+    font-size: 1.2rem;
+    min-width: 10vw;
+    margin-top: 1rem;
 }
 }

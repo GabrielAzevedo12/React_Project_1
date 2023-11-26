@@ -1,16 +1,8 @@
-//import logo from './logo.svg';
-import './css/Main.css';
-import './css/Main_Conatiner_Filho.css';
-import './css/titulo.css';
-import './css/aumentarAltura.css';
-import './css/diminuirAltura.css';
-import './css/deslocametoHeader_negativo.css'
-import './css/deslocametoHeader_positivo.css'
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import { Adicionar_class, Remover_class, Existe_Class, S1, S2, $, new_text, def_dimensoes } from '../funçoes/funçoes'
+import React, { Fragment } from "react";
+//import FakeText from "../../FakeText/FakeText";
+import './css/Home_Container.css';
 
-function Main() {
+const Home = () => {
   var scrollOld = 0;
   const
   ScrollMain_onScroll = (e) => {
@@ -40,21 +32,17 @@ function Main() {
     }
     scrollOld = e.scrollHeight - e.scrollTop;
   };
-
-  return (
-      <div className="Main template-column">
-        <Header/>
-        <div className="Main_Conatiner_Filho" onScroll={(e) => {
+  
+    return ( 
+          <div className="Home_Container" onScroll={(e) => {
           ScrollMain_onScroll(e.target)
         }}>
-          <h1 className="titulo">Teste</h1>
-          <h1 className="titulo">Teste</h1>
-          <h1 className="titulo">Teste</h1>
-          <h1 className="titulo">Teste</h1>
+            <h1 className="titulo">Teste</h1>
+            <h1 className="titulo">Teste</h1>
+            <h1 className="titulo">Teste</h1>
+            <h1 className="titulo">Teste</h1>
         </div>
-        <Footer />
-      </div>
-  );
+        );
 }
 
-export default Main;
+export default Home
