@@ -1,8 +1,10 @@
 @media only screen and (min-width: 1024px) {
     .Home_Container {
         grid-area: Main;
+        /*
         max-height: 99vh;
         max-width: 99vw;
+        */
         min-height: 99vh;
         min-width: 99vw;
         background-color: black;

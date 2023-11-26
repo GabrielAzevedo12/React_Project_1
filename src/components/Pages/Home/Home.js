@@ -1,42 +1,31 @@
 import React, { Fragment } from "react";
 //import FakeText from "../../FakeText/FakeText";
-import './css/Home_Container.css';
+import './css/Home.css';
 import { esconder, exibir } from "../../funçoes/funçoes";
 import Banner from "../../Layout/Banner/Banner";
 const Home = () => {
   var scrollOld = 0;
   const
-  ScrollMain_onScroll = (e) => {
+  ScrollMain_onScroll = () => {
     const 
     Header = document.querySelector(".Header"), 
     Footer = document.querySelector(".Footer");
-    if (scrollOld >= e.scrollHeight - e.scrollTop) {
-      //console.log(1)
-      /*
-      Footer.classList.add("aumentarAltura")
-      Footer.classList.remove("diminuirAltura")
-      Header.classList.add("deslocametoHeader_negativo")
-      Header.classList.remove("deslocametoHeader_positivo")
-      */
+    if (scrollOld >= window.scrollY) {
       esconder(Header);
       exibir(Footer);
     } else {
-      /*      
-      Header.classList.add("deslocametoHeader_positivo");
-      Header.classList.remove("deslocametoHeader_negativo")
-      Footer.classList.add("diminuirAltura")
-      Footer.classList.remove("aumentarAltura")
-      */
       esconder(Footer);
       exibir(Header);
-      //console.log(1)
     }
-    scrollOld = e.scrollHeight - e.scrollTop;
+    scrollOld = window.scrollY;
   };
+  window.addEventListener('scroll', () => {
+    ScrollMain_onScroll()
+  })
   
     return ( 
           <div className="Home_Container center" onScroll={(e) => {
-          ScrollMain_onScroll(e.target)
+          //ScrollMain_onScroll(e.target)
         }}>
             <Banner/>
         </div>

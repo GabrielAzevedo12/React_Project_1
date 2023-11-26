@@ -1,9 +1,11 @@
 .Banner_Container {
     display: grid;
     grid-template-areas:
+    'BannerBlank BannerBlank BannerBlank BannerBlank BannerBlank'
     'Banner1 Banner1 Banner1 Banner1 Banner1 Banner1'
     'Banner3 Banner2 Banner2 Banner2 Banner2 Banner2'
-    'Banner3 Banner4 Banner4 Banner4 Banner4 Banner4';
+    'Banner3 Banner4 Banner4 Banner4 Banner4 Banner4'
+    'Banner5 Banner4 Banner4 Banner4 Banner4 Banner4';
     gap: 10px;
     padding: 10px;
   
