@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 //import FakeText from "../../FakeText/FakeText";
 import './css/Home_Container.css';
-
+import { esconder, exibir } from "../../funçoes/funçoes";
 const Home = () => {
   var scrollOld = 0;
   const
@@ -17,8 +17,8 @@ const Home = () => {
       Header.classList.add("deslocametoHeader_negativo")
       Header.classList.remove("deslocametoHeader_positivo")
       */
-      Footer.style.display = "";
-      Header.style.display = "none";
+      esconder(Header);
+      exibir(Footer);
     } else {
       /*      
       Header.classList.add("deslocametoHeader_positivo");
@@ -26,8 +26,8 @@ const Home = () => {
       Footer.classList.add("diminuirAltura")
       Footer.classList.remove("aumentarAltura")
       */
-      Footer.style.display = "none";
-      Header.style.display = "";
+      esconder(Footer);
+      exibir(Header);
       //console.log(1)
     }
     scrollOld = e.scrollHeight - e.scrollTop;

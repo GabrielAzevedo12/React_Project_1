@@ -64,6 +64,23 @@ Adicionar_class = (e, name_class) => {
   def_dimensoes = (e,w,h) => {
     e["style"]["width"] = w;
     e["style"]["height"] = h;
+  },
+  esconder = (e) => {
+    e.style.display = "none";
+  },
+  exibir = (e) => {
+    e.style.display = "";
   };
 
-  export { Adicionar_class, Remover_class, Existe_Class, S1, S2, $, new_text, def_dimensoes }
+  export { 
+    Adicionar_class,
+    Remover_class,
+    Existe_Class,
+    S1,
+    S2,
+    $,
+    new_text,
+    def_dimensoes,
+    esconder,
+    exibir
+           }

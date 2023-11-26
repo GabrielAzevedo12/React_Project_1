@@ -5,15 +5,18 @@
     max-height: 100vh;
     */
     min-width: 40vw;
+    /*
     background-color: rgb(69, 111, 150);
     color: rgb(155, 158, 125);
+    */
 }
-.div_nav {
+.Nav_div {
     justify-content: space-between;
+    height: 100%;
 }
-.item_lista_nav {
+.Nav_lista_item {
     font-size: 1.2rem;
     min-width: 10vw;
-    margin-top: 1rem;
+    list-style-type: none;
 }
 }

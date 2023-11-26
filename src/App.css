@@ -4,57 +4,6 @@
   background-color: #2196F3;
 }
 
-.grid-container-templateLayout-1 {
-  display: grid;
-  grid-template-areas:
-    'Header Header Header Header Header Header'
-    'Nav Main Main Main Main Main'
-    'Nav Footer Footer Footer Footer Footer';
-  gap: 10px;
-  padding: 10px;
-
-}
-
-.grid-container-templateLayout-2 {
-  display: grid;
-  grid-template-areas:
-    'Header Header Header Header Header Header'
-    'Main Main Main Main Nav'
-    'Footer Footer Footer Footer Nav';
-  gap: 10px;
-  padding: 10px;
-
-}
-
-.grid-container-templateLayout-3 {
-  display: grid;
-  grid-template-areas:
-    'Header Header Header Header Header Header'
-    'Nav Nav Nav Nav Nav'
-    'Main Main Main Main Main'
-    'Footer Footer Footer Footer Footer';
-  gap: 10px;
-  padding: 10px;
-
-}
-
-.grid-container-templateLayout-4 {
-  display: grid;
-  grid-template-areas:
-    'Header Header Header Header Header Header'
-    'Main Main Main Main Main'
-    'Footer Footer Footer Footer Footer';
-  gap: 10px;
-  padding: 10px;
-
-}
-
-.template-column {
-  display: flex;
-  flex-direction: column;
-
-}
-
 @keyframes App-logo-spin {
 
 }
