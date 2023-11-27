@@ -1,4 +1,4 @@
-let Mover_Animation_plano_xy = (elemento,limite,transformarx,transformary) => {
+let Mover_Animation_plano_xy = (elemento, limite, transformarx, transformary) => {
 
     let x = posiçaoRelativa_x(elemento);
     if (x >= limite) {
