@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import './css/Banner3.css';
 import SubBanner from "../../subBanner/subBanner";
-import { Teste_Animation_plano_xy } from "../../../../funçoes/Mover_Animation_plano_xy";
+import { Teste_Animation_plano_xy } from "../../../../funçoes/Animation_plano_xy";
 
 const Banner3 = () => { 
     return ( 

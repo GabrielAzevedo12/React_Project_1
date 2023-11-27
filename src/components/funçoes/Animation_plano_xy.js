@@ -1,8 +1,8 @@
 import { posiçaoRelativa_x as posiçaoAtual_x } from './posiçao_relativa_x.js';
 import { posiçaoRelativa_y as posiçaoAtual_y } from './posiçao_relativa_y.js';
 //import { Animation_plano_xy } from "./Animation_plano_xy"; 
-import { $, sucessor_n, indentidade_negativo, incrementar_dimensoes, indentidade, quadrado } from "./funçoes"
-import { Deslocar_plano_xy } from "./Deslocar_plano_xy";
+import { $, sucessor_n, indentidade_negativo, incrementar_dimensoes, indentidade, quadrado } from "./funçoes.js"
+import { Deslocar_plano_xy } from "./Deslocar_plano_xy.js";
 //import { posiçaoRelativa_x as posiçaoAtual_x } from "./posiçao_relativa_x";
 
 let Animation_plano_xy = (elemento, limite, transformarx, transformary, Action_in_xy, Interval_for_Action) => {
