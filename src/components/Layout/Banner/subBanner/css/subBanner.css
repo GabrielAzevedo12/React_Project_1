@@ -1,4 +1,4 @@
 .subBanner {
-    overflow-y: scroll;
-    overflow-x: scroll;
+    height: 100%;
+    width: 100%;
 }

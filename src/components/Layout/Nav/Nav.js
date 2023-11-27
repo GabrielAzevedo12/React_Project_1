@@ -7,9 +7,9 @@ function Nav({ name }) {
   return (
     <nav className='Nav'>
         <div className='flex-row Nav_div'>
-          <div className='Nav_lista_item center'><Link to="/">Home</Link></div>
-          <div className='Nav_lista_item center'><Link to="/about">About</Link></div>
-          <div className='Nav_lista_item center'><Link to="/contact">Contact</Link></div>
+          <div className='Nav_lista_item center'><Link className="Nav_lista_item_a" to="/">Home</Link></div>
+          <div className='Nav_lista_item center'><Link className="Nav_lista_item_a" to="/about">About</Link></div>
+          <div className='Nav_lista_item center'><Link className="Nav_lista_item_a" to="/contact">Contact</Link></div>
         </div>
     </nav>
   );

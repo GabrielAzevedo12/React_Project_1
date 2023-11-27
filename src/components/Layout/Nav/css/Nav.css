@@ -15,8 +15,19 @@
     height: 100%;
 }
 .Nav_lista_item {
-    font-size: 1.2rem;
     min-width: 10vw;
+}
+a.Nav_lista_item_a {
+    font-size: 1.2rem;
     list-style-type: none;
+    color: rgb(132, 150, 165);
+    font-weight: 500;
 }
+a.Nav_lista_item_a:hover {
+    font-size: 1.3rem;
+    color: rgb(54, 119, 98);
+    font-weight: 600;
 }
+
+}
+
