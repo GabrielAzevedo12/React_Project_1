@@ -1,3 +1,6 @@
+import {cat_h} from "./cat_h"
+import {cat_w} from "./cat_w"
+
 const
 Adicionar_class = (e, name_class) => {
     if(e) {
@@ -65,12 +68,28 @@ Adicionar_class = (e, name_class) => {
     e["style"]["width"] = w;
     e["style"]["height"] = h;
   },
+  incrementar_dimensoes = (e,w,h) => {
+    let 
+    [w_new, h_new] = [parseInt(e.getBoundingClientRect().width) + w, parseInt(e.getBoundingClientRect().height) + h];
+    e["style"]["width"] = w_new + "px";
+    e["style"]["height"] = h_new + "px";
+  },
   esconder = (e) => {
     e.style.display = "none";
   },
   exibir = (e) => {
     e.style.display = "";
-  };
+  },
+
+  sucessor_n = (n) => ( n+1 ),
+
+  dobro_n_negativo = (n) => ( n*0 ),
+
+  indentidade = ( any ) => ( any ),
+
+  indentidade_negativo = ( any ) => ( -1*any ),
+  
+  quadrado = ( any ) => ( -1*any*any );
 
   export { 
     Adicionar_class,
@@ -82,5 +101,11 @@ Adicionar_class = (e, name_class) => {
     new_text,
     def_dimensoes,
     esconder,
-    exibir
+    exibir,
+    sucessor_n,
+    dobro_n_negativo,
+    indentidade,
+    indentidade_negativo,
+    incrementar_dimensoes,
+    quadrado
            }

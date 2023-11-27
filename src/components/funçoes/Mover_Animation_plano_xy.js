@@ -1,15 +1,19 @@
 import { posiçaoRelativa_x as posiçaoAtual_x } from './posiçao_relativa_x.js';
 import { posiçaoRelativa_y as posiçaoAtual_y } from './posiçao_relativa_y.js';
+//import { Animation_plano_xy } from "./Animation_plano_xy"; 
+import { $, sucessor_n, indentidade_negativo, incrementar_dimensoes, indentidade, quadrado } from "./funçoes"
+import { Deslocar_plano_xy } from "./Deslocar_plano_xy";
+//import { posiçaoRelativa_x as posiçaoAtual_x } from "./posiçao_relativa_x";
 
-let Mover_Animation_plano_xy = (elemento, limite, transformarx, transformary, Action_in_xy) => {
+let Animation_plano_xy = (elemento, limite, transformarx, transformary, Action_in_xy, Interval_for_Action) => {
 
     let x = posiçaoAtual_x(elemento);
     let y = posiçaoAtual_y(elemento);
     let condiçao = x >= limite ;
     
-    let Interval_for_Action = setInterval(() => {
-        Mover_Animation_plano_xy(elemento, limite, transformarx, transformary, Action_in_xy);
-    },0);
+    // const Interval_for_Action = setInterval(exe,10);
+
+    console.log(condiçao, x)
 
     if (condiçao) {
 
@@ -22,10 +26,32 @@ let Mover_Animation_plano_xy = (elemento, limite, transformarx, transformary, Ac
         Action_in_xy(elemento, x, y);
 
     }
-
-    console.log(condiçao,x)
     
 }
+
+const Teste_Animation_plano_xy = () => {
+    
+/*
+    const Interval_for_Action_1 = setInterval(() => {
+    Animation_plano_xy($(".Banner3_Container"),
+    5,
+    sucessor_n,
+    quadrado,
+    Deslocar_plano_xy,
+    Interval_for_Action_1)
+    },10);
+    */
+
+    const Interval_for_Action_2 = setInterval(() => {
+    Animation_plano_xy($(".Banner3_Container"),
+    10,
+    sucessor_n,
+    indentidade,
+    incrementar_dimensoes,
+    Interval_for_Action_2)
+    },10);
+
+  }
 
 /*
 let Interval_for_Action = setInterval(() => {
@@ -34,12 +60,12 @@ let Interval_for_Action = setInterval(() => {
 
 Deslocar_plano_xy(elemento, x, y);    
 
-const Teste_Mover_Animation_plano_xy = () => {
+const Teste_Animation_plano_xy = () => {
     const sucessor_n = (n) => ( n+1 );
     const dobro_n = (n) => ( n*2 );
-    Mover_Animation_plano_xy($(".Banner3_Container"), 500, sucessor_n, dobro_n, Deslocar_plano_xy)
+    Animation_plano_xy($(".Banner3_Container"), 500, sucessor_n, dobro_n, Deslocar_plano_xy)
 }
 
  */
 
-export { Mover_Animation_plano_xy }
+export { Animation_plano_xy, Teste_Animation_plano_xy }
