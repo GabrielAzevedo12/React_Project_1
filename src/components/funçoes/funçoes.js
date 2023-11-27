@@ -22,7 +22,7 @@ Adicionar_class = (e, name_class) => {
         if(x === name_class) {
     
             return true;
-            break;
+            //break;
      
         } else {
     

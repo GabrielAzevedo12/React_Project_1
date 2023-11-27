@@ -35,3 +35,27 @@ const Scroll = (Incremento, ElementoScroll, TypeScroll, Limite_Scroll) => {
       }
     }
   };
+
+  const Scroll_xy = (e,x,y) => {
+
+    if(x === undefined || x === null) {
+
+      x = 0;
+
+  } 
+
+  if(y === undefined || y === null) {
+
+    y = 0;
+
+  }
+  
+  e.scrollTo({
+    left: x + e["scrollLeft"],
+    top: y + e["scrollTop"],
+    behavior: "smooth",
+  });
+  
+  }
+
+  export { Scroll_xy }
