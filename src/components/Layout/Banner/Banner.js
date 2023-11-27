@@ -13,7 +13,7 @@ import BannerGeral from "./BannerGeral/BannerGeral";
 const Banner = () => { 
     return ( 
           <div className="Banner_Container Banner">
-            <BannerGeral className="BannerBlank_Container BannerBlank"></BannerGeral>
+            <BannerGeral className="BannerBlank_Container BannerBlank"/>
             <Banner1/>
             <Banner2/>
             <Banner3/>

@@ -1,13 +1,21 @@
 .Banner_Container {
     display: grid;
     grid-template-areas:
-    'BannerBlank BannerBlank BannerBlank BannerBlank BannerBlank'
+    'BannerBlank BannerBlank BannerBlank BannerBlank BannerBlank BannerBlank'
     'Banner1 Banner1 Banner1 Banner1 Banner1 Banner1'
     'Banner3 Banner2 Banner2 Banner2 Banner2 Banner2'
     'Banner3 Banner4 Banner4 Banner4 Banner4 Banner4'
     'Banner5 Banner4 Banner4 Banner4 Banner4 Banner4';
     gap: 10px;
     padding: 10px;
-  
+  }
+
+  .Banner {
+    box-shadow: 0px 0px 25px 25px rgb(22, 28, 34), 0px 0px 25px 25px black; 
+    border-radius: 5px;
+  }
+  .Banner:hover {
+    box-shadow: 0px 0px 50px 50px rgb(22, 28, 34), 0px 0px 50px 50px black; 
+    border-radius: 10px;
   }
   

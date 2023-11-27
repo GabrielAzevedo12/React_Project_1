@@ -1,6 +1,6 @@
 .BannerBlank {
     grid-area: BannerBlank;
     min-width: 99vw;
-    min-height: 30vh;
-    background-color: rgb(43, 32, 53);
+    min-height: 10vh;
+    background: linear-gradient(rgb(21, 19, 22) 5%, black);
 }

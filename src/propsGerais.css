@@ -99,11 +99,6 @@
     max-height: 0;
   }
 
-a {
-  list-style-type: none;
-  text-decoration: none;
-  }
-
 .style_template_1 {
   background: linear-gradient(transparent, rgb(8, 19, 29) );
   color: rgb(112, 131, 150);
