@@ -9,7 +9,7 @@ const SubBanner = ( props ) => {
     */
    const className =`${props.BannerPai}_Container_subBanner${props.indexItem} ${props.BannerPai}_subBanner subBanner ${props.className}`
     return ( 
-          <div className={className}>
+          <div className={className} onClick={props.onClick || null}>
             {props.children}
           </div>
         );
