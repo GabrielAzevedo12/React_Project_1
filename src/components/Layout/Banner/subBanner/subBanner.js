@@ -13,8 +13,8 @@ const SubBanner = ( props ) => {
 
     return ( 
           <div id={id} className={className} onClick={props.onClick || null} onLoad={(e) => {
-            console.log(e.target) 
-             if(props.event) {
+            console.log(e.target) ;
+             if(props.events) {
 
               for ( const event of props.events ) {
 

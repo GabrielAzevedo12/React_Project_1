@@ -12,7 +12,7 @@ const Banner3 = () => {
             <SubBanner BannerPai="Banner3" indexItem={2} className=""/>
             <SubBanner BannerPai="Banner3" indexItem={3} className=""/>
    */
-  const events = { 
+  const Banner3_events = { 
     typeEvent: "click",
     functionEvent: () => {
       Teste_Mover_Animation_plano_xy()
@@ -20,7 +20,7 @@ const Banner3 = () => {
   }
     return ( 
           <BannerGeral BannerName="Banner3">
-            <SubBanner BannerPai="Banner3" indexItem={1} className="" events={events}/>
+            <SubBanner BannerPai="Banner3" indexItem={1} className="" events={Banner3_events}/>
             <SubBanner BannerPai="Banner3" indexItem={2} className=""/>
             <SubBanner BannerPai="Banner3" indexItem={3} className=""/>
           </BannerGeral>
