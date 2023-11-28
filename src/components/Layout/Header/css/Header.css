@@ -1,8 +1,8 @@
 @media only screen and (min-width: 1024px) {
 .Header {
     grid-area: Header;
-    max-width: 100vw;
-    min-width: 100vw;
+    max-width: 99vw;
+    min-width: 99vw;
     max-height: 10vh;
     min-height: 10vh;
     height: 10vh;

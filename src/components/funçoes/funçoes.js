@@ -75,10 +75,14 @@ Adicionar_class = (e, name_class) => {
     e["style"]["height"] = h_new + "px";
   },
   esconder = (e) => {
+    console.log(e)
     e.style.display = "none";
+    console.log(e.style.display)
   },
   exibir = (e) => {
+    console.log(e)
     e.style.display = "";
+    console.log(e.style.display)
   },
 
   sucessor_n = (n) => ( n+1 ),

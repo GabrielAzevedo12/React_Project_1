@@ -8,9 +8,9 @@ import './css/deslocametoHeader_negativo.css'
 import './css/deslocametoHeader_positivo.css'
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import { Adicionar_class, Remover_class, Existe_Class, S1, S2, $, new_text, def_dimensoes } from '../../funçoes/funçoes'
+import { $ } from '../../funçoes/funçoes'
 import { BrowserRouter as Router, Route, Link, Routes, redirect as Redirect } from "react-router-dom";
-import React, { Fragment } from "react";
+import React from "react";
 import Home from '../../Pages/Home/Home';
 import Contact from '../../Pages/Contact/Contact';
 import About from '../../Pages/About/About';
@@ -19,20 +19,6 @@ import Container from '../Container/Container';
 
 function Main() {
   const name = "Teste"
-/*
-    <div className="Main template-column">
-        <Header/>
-        <div className="Main_Conatiner_Filho" onScroll={(e) => {
-          //ScrollMain_onScroll(e.target)
-        }}>
-          <h1 className="titulo">Teste</h1>
-          <h1 className="titulo">Teste</h1>
-          <h1 className="titulo">Teste</h1>
-          <h1 className="titulo">Teste</h1>
-        </div>
-        <Footer />
-      </div>
-*/
   return (
     <Router>
     <main>
@@ -52,3 +38,18 @@ function Main() {
 }
 
 export default Main;
+
+/*
+    <div className="Main template-column">
+        <Header/>
+        <div className="Main_Conatiner_Filho" onScroll={(e) => {
+          //ScrollMain_onScroll(e.target)
+        }}>
+          <h1 className="titulo">Teste</h1>
+          <h1 className="titulo">Teste</h1>
+          <h1 className="titulo">Teste</h1>
+          <h1 className="titulo">Teste</h1>
+        </div>
+        <Footer />
+      </div>
+*/

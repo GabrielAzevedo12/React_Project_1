@@ -1,0 +1,11 @@
+.ButtonDinamico_Nav {
+    font-size: 1.4rem;
+    list-style-type: none;
+    color: rgb(132, 150, 165);
+    font-weight: 700;
+}
+.ButtonDinamico_Nav:hover {
+    font-size: 1.5rem;
+    color: rgb(54, 119, 98);
+    font-weight: 600;
+}

@@ -49,4 +49,6 @@ const genKey = (lengthKey) => {
 
 }
 
+//console.log(genKey(5))
+
 export { genKey }
