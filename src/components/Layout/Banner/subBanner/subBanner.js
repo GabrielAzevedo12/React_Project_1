@@ -13,14 +13,19 @@ const SubBanner = ( props ) => {
 
     return ( 
           <div id={id} className={className} onClick={props.onClick || null} onLoad={(e) => {
-            for ( const event of props.events ) {
+            console.log(e.target) 
+             if(props.event) {
 
-             if (event) {
-               e.target.addEventListener(event.typeEvent, event.functionEvent)
+              for ( const event of props.events ) {
+
+                if (event) {
+                  e.target.addEventListener(event.typeEvent, event.functionEvent)
+                }
+  
+               }
+               
              }
-
-            }
-            } }>
+             }}>
             {props.children}
           </div>
         );

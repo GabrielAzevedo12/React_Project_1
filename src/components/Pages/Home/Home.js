@@ -33,8 +33,8 @@ const Home = () => {
   
     return ( 
           <div className="Home_Container center" onScroll={(e) => {
-          //ScrollMain_onScroll(e.target)
-        }}>
+            //ScrollMain_onScroll(e.target)
+}}>
             <Banner/>
         </div>
         );

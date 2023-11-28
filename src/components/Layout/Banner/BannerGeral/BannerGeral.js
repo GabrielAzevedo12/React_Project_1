@@ -7,14 +7,20 @@ const BannerGeral = ( props ) => {
   const 
    className =`${props.BannerName}_Container Banner ${props.className}`,
    id = `${props.BannerName}`;
+
     return ( 
           <div id={id || "Banner" + genKey(5) } className={className || ""} onLoad={(e) => {
-             for ( const event of props.events ) {
+            console.log(e.target) 
+             if(props.event) {
 
-              if (event) {
-                e.target.addEventListener(event.typeEvent, event.functionEvent)
-              }
+              for ( const event of props.events ) {
 
+                if (event) {
+                  e.target.addEventListener(event.typeEvent, event.functionEvent)
+                }
+  
+               }
+               
              }
              } }>
             {props.children}
