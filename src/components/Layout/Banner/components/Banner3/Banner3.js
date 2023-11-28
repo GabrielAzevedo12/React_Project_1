@@ -13,10 +13,11 @@ const Banner3 = () => {
             <SubBanner BannerPai="Banner3" indexItem={3} className=""/>
    */
   const Banner3_events = { 
-    typeEvent: "click",
-    functionEvent: () => {
+    
+    onClick: () => {
       Teste_Mover_Animation_plano_xy()
     }
+
   }
     return ( 
           <BannerGeral BannerName="Banner3">

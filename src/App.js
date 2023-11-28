@@ -21,5 +21,9 @@ function App() {
       <Nav />
       <Main />
       <Footer />
+
+      document.body.onload = (e) => {
+  e.target.setAttribute("permissao_event_banner", "true")
+}
 */
 export default App;

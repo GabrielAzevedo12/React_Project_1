@@ -9,7 +9,16 @@ const BannerGeral = ( props ) => {
    id = `${props.BannerName}`;
 
     return ( 
-          <div id={id || "Banner" + genKey(5) } className={className || ""} onLoad={(e) => {
+          <div id={id || "Banner" + genKey(5) } className={className || ""} >
+            {props.children}
+          </div>
+        );
+}
+
+export default BannerGeral
+
+/*
+onLoad={(e) => {
             console.log(e.target) 
              if(props.event) {
 
@@ -22,10 +31,5 @@ const BannerGeral = ( props ) => {
                }
                
              }
-             } }>
-            {props.children}
-          </div>
-        );
-}
-
-export default BannerGeral
+             } }
+*/
