@@ -54,7 +54,7 @@ const Teste_Mover_Animation_plano_xy = () => {
 console.log( genKey(50) );
 
 Scroll_Animation_plano_xy(
-    $(".Banner1_Container"),
+    $("#Banner1"),
     window.innerWidth,
     sucessor_n,
     nothing)
