@@ -88,8 +88,12 @@ Adicionar_class = (e, name_class) => {
   indentidade = ( any ) => ( any ),
 
   indentidade_negativo = ( any ) => ( -1*any ),
+
+  quadrado = ( any ) => ( any*any ),
+
+  quadrado_negativo = ( any ) => ( -1*any*any ),
   
-  quadrado = ( any ) => ( -1*any*any );
+  nothing = ( any ) => ( 0 ) ;
 
   export { 
     Adicionar_class,
@@ -107,5 +111,7 @@ Adicionar_class = (e, name_class) => {
     indentidade,
     indentidade_negativo,
     incrementar_dimensoes,
-    quadrado
+    quadrado,
+    quadrado_negativo,
+    nothing
            }

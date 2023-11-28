@@ -1,37 +1,16 @@
 import { posiçaoRelativa_x as posiçaoAtual_x } from './posiçao_relativa_x.js';
 import { posiçaoRelativa_y as posiçaoAtual_y } from './posiçao_relativa_y.js';
 //import { Mover_Animation_plano_xy } from "./Mover_Animation_plano_xy"; 
-import { $, sucessor_n, indentidade_negativo, incrementar_dimensoes, indentidade, quadrado } from "./funçoes"
+import { $, sucessor_n, indentidade_negativo, incrementar_dimensoes, indentidade, quadrado, nothing } from "./funçoes"
 import { Deslocar_plano_xy } from "./Deslocar_plano_xy";
 import { cat_h } from './cat_h.js';
 import { cat_w } from './cat_w.js';
+import { cat_scrollx } from "./cat_scrollx.js"
+import { cat_scrolly } from "./cat_scrolly.js"
+import { Scroll_xy } from "./Scroll.js"
+import { genKey } from './genRandomKey.js';
+
 //import { posiçaoRelativa_x as posiçaoAtual_x } from "./posiçao_relativa_x";
-
-/*
-let Mover_Animation_plano_xy = (elemento, limite, transformarx, transformary, Action_in_xy, Interval_for_Action) => {
-
-    let x = posiçaoAtual_x(elemento);
-    let y = posiçaoAtual_y(elemento);
-    let condiçao = x >= limite ;
-    
-    // const Interval_for_Action = setInterval(exe,10);
-
-    console.log(condiçao, x)
-
-    if (condiçao) {
-
-        clearInterval(Interval_for_Action);
-
-    } else {
-
-        x = transformarx(x);
-        y = transformary(x);
-        Action_in_xy(elemento, x, y);
-
-    }
-    
-}
-*/
 
 let Animation_plano_xy = (elemento, limite, referencia_x, referencia_y, transformarx, transformary, Action_in_xy, Interval_for_Action) => {
 
@@ -88,7 +67,23 @@ Expandir_Animation_plano_xy = (elemento, limite, transformarx, transformary) => 
                 Interval_for_Action_1)
             },10);
         
-}          
+},
+
+Scroll_Animation_plano_xy = (elemento, limite, transformarx, transformary) => {
+
+    const Interval_for_Action_1 = setInterval(() => {
+        Animation_plano_xy(
+            elemento,
+            limite,
+            cat_scrollx,
+            cat_scrolly, 
+            transformarx,
+            transformary,
+            Scroll_xy,
+            Interval_for_Action_1)
+        },10);
+    
+}  ;
     
 
 const Teste_Mover_Animation_plano_xy = () => {
@@ -102,7 +97,7 @@ const Teste_Mover_Animation_plano_xy = () => {
     Deslocar_plano_xy,
     Interval_for_Action_1)
     },10);
-*/
+
     Mover_Animation_plano_xy($(".Banner3_Container"),
     10,
     sucessor_n,
@@ -112,6 +107,16 @@ const Teste_Mover_Animation_plano_xy = () => {
     10,
     sucessor_n,
     indentidade)
+
+*/
+
+console.log( genKey(50) );
+
+Scroll_Animation_plano_xy(
+    $(".Banner1_Container"),
+    200,
+    sucessor_n,
+    nothing)
 
   }
 

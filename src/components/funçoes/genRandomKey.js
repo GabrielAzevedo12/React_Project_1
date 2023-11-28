@@ -37,14 +37,14 @@ console.log(key);
 console.log(catN("c",chars));
 */
 
-const genKey = () => {
+const genKey = (lengthKey) => {
 
     var ch,string = '';
-    for(var i = 0 ; i <= 10; i++) {
+    for(var i = 0 ; i <= lengthKey; i++) {
         ch = MaiscOrMins(chars[geNumRand()]);
         string = string + ch ;
     }
-
+ 
     return string;
 
 }
