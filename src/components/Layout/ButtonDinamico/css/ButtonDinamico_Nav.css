@@ -8,4 +8,5 @@
     font-size: 1.5rem;
     color: rgb(54, 119, 98);
     font-weight: 600;
+    z-index:10;
 }

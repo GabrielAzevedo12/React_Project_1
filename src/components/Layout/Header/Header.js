@@ -14,14 +14,14 @@ function Header() {
     if ( $("#Nav1").style.display === "none" ) {
       exibir($("#Nav1")) ;
       setBoolean(true) ;
-      Adicionar_class(e.target.parentElement, "Animation_ButtonDinamico_Nav_moverLeft_d98V0w");
-      Remover_class(e.target.parentElement, "Animation_ButtonDinamico_Nav_moverLeft_gM70YiCU9x4");
+      Adicionar_class($("#ButtonDinamico_Nav_left"), "Animation_ButtonDinamico_Nav_moverLeft_d98V0w");
+      Remover_class($("#ButtonDinamico_Nav_left"), "Animation_ButtonDinamico_Nav_moverLeft_gM70YiCU9x4");
 
     } else {
       esconder($("#Nav1"))
       setBoolean(false) ;
-      Remover_class(e.target.parentElement, "Animation_ButtonDinamico_Nav_moverLeft_d98V0w");
-      Adicionar_class(e.target.parentElement, "Animation_ButtonDinamico_Nav_moverLeft_gM70YiCU9x4");
+      Remover_class($("#ButtonDinamico_Nav_left"), "Animation_ButtonDinamico_Nav_moverLeft_d98V0w");
+      Adicionar_class($("#ButtonDinamico_Nav_left"), "Animation_ButtonDinamico_Nav_moverLeft_gM70YiCU9x4");
     }
 
   }
@@ -32,15 +32,17 @@ function Header() {
         This is Logo
       </div>
       <div className='flex-row'>
-        <ButtonDinamico id="Nav" className="center">
-          {boolean ? 
-          <BsChevronDoubleRight id="ButtonDinamico_Nav_right" className='ButtonDinamico_Nav' onClick = {ButtonDinamico_onClick} /> :
-          <BsChevronDoubleLeft id="ButtonDinamico_Nav_left" className='ButtonDinamico_Nav' onClick = {ButtonDinamico_onClick} />} 
+        <ButtonDinamico id="Nav" className="center">       
+          <BsChevronDoubleLeft id="ButtonDinamico_Nav_left" className='ButtonDinamico_Nav Animation_ButtonDinamico_Nav_moverLeft_gM70YiCU9x4' onClick = {ButtonDinamico_onClick} /> 
         </ButtonDinamico>
         <Nav name="Teste" id="Nav1" style={{display: "none"}}/>
       </div>
     </div>
   );
 }
-
+/*
+ {boolean ? 
+          <BsChevronDoubleRight id="ButtonDinamico_Nav_right" className='ButtonDinamico_Nav' onClick = {ButtonDinamico_onClick} /> :
+          <BsChevronDoubleLeft id="ButtonDinamico_Nav_left" className='ButtonDinamico_Nav' onClick = {ButtonDinamico_onClick} />} 
+*/
 export default Header;
