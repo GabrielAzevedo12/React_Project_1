@@ -48,7 +48,7 @@ const Teste_Mover_Animation_plano_xy = () => {
     10,
     sucessor_n,
     indentidade)
-
+    
 */
 
 console.log( genKey(50) );

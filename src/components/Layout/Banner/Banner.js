@@ -1,8 +1,7 @@
-import React, { Fragment } from "react";
+import React from "react";
 //import FakeText from "../../FakeText/FakeText";
 import './css/Banner.css';
 import './css/BannerBlank.css'
-import { esconder, exibir } from "../../funçoes/funçoes";
 import Banner1 from "./components/Banner1/Banner1";
 import Banner2 from "./components/Banner2/Banner2";
 import Banner3 from "./components/Banner3/Banner3";
@@ -13,7 +12,7 @@ import BannerGeral from "./BannerGeral/BannerGeral";
 const Banner = () => { 
     return ( 
           <div className="Banner_Container Banner">
-            <BannerGeral className="BannerBlank_Container BannerBlank"/>
+            <BannerGeral BannerName="BannerBlank" />
             <Banner1/>
             <Banner2/>
             <Banner3/>
@@ -22,6 +21,7 @@ const Banner = () => {
           </div>
         );
 }
+
 /*
 <BannerGeral className="Banner_Container Banner">
   <BannerGeral className="Banner1_Container Banner1">
@@ -29,5 +29,15 @@ const Banner = () => {
   <BannerGeral className="Banner3_Container Banner3">
   <BannerGeral className="Banner4_Container Banner4">
 </BannerGeral>
+
+<div className="Banner_Container Banner">
+            <BannerGeral className="BannerBlank_Container BannerBlank"/>
+            <Banner1/>
+            <Banner2/>
+            <Banner3/>
+            <Banner4/>
+            <Banner5/>
+          </div>
  */
+
 export default Banner

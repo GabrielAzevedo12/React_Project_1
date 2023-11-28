@@ -1,4 +1,4 @@
-.BannerBlank {
+#BannerBlank {
     grid-area: BannerBlank;
     min-width: 99vw;
     min-height: 10vh;
