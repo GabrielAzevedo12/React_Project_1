@@ -1,7 +1,7 @@
 import { posiçaoRelativa_x as posiçaoAtual_x } from './posiçao_relativa_x.js';
 import { posiçaoRelativa_y as posiçaoAtual_y } from './posiçao_relativa_y.js';
 //import { Mover_Animation_plano_xy } from "./Mover_Animation_plano_xy"; 
-import { $, sucessor_n, indentidade_negativo, incrementar_dimensoes, indentidade, quadrado, nothing } from "./funçoes"
+import { $, sucessor_n, indentidade_negativo, incrementar_dimensoes, indentidade, quadrado, nothing, um_decimo } from "./funçoes"
 import { Deslocar_plano_xy } from "./Deslocar_plano_xy";
 import { cat_h } from './cat_h.js';
 import { cat_w } from './cat_w.js';
@@ -20,7 +20,7 @@ let Animation_plano_xy = (elemento, limite, referencia_x, referencia_y, transfor
     
     // const Interval_for_Action = setInterval(exe,10);
 
-    console.log(condiçao, x)
+    console.log(condiçao, x, transformarx(x), transformary(x))
 
     if (condiçao) {
 
@@ -114,7 +114,7 @@ console.log( genKey(50) );
 
 Scroll_Animation_plano_xy(
     $(".Banner1_Container"),
-    200,
+    window.innerWidth,
     sucessor_n,
     nothing)
 

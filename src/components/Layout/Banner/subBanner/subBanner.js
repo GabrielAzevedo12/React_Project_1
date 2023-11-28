@@ -7,9 +7,12 @@ const SubBanner = ( props ) => {
     className = props.BannerPai + "Container_SubBanner1 " + 
     props.BannerPai + "SubBanner1 SubBanner " + props.className;
     */
-   const className =`${props.BannerPai}_Container_subBanner${props.indexItem} ${props.BannerPai}_subBanner subBanner ${props.className}`
+   const 
+   className =`${props.BannerPai}_subBanner subBanner ${props.className}`,
+   id = `${props.BannerPai}_Container_subBanner${props.indexItem}`;
+
     return ( 
-          <div className={className} onClick={props.onClick || null}>
+          <div className={className} id={id} onClick={props.onClick || null}>
             {props.children}
           </div>
         );

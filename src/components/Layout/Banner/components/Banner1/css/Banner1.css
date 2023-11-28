@@ -8,7 +8,7 @@
     background-color: rgb(43, 32, 53);
 }
 .Banner1_subBanner {
-    height: 100%;
-    width: 100%;
+    min-height: 30vh;
+    min-width: 100vw;
     background-color: rgb(149, 129, 168);
 }

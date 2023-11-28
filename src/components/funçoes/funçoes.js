@@ -83,6 +83,8 @@ Adicionar_class = (e, name_class) => {
 
   sucessor_n = (n) => ( n+1 ),
 
+  um_decimo = (n) => ( n + 0.5 ),
+
   dobro_n_negativo = (n) => ( n*0 ),
 
   indentidade = ( any ) => ( any ),
@@ -113,5 +115,6 @@ Adicionar_class = (e, name_class) => {
     incrementar_dimensoes,
     quadrado,
     quadrado_negativo,
-    nothing
+    nothing,
+    um_decimo
            }
