@@ -12,7 +12,15 @@ const SubBanner = ( props ) => {
    id = `${props.BannerPai}_subBanner${props.indexItem}`;
 
     return ( 
-          <div id={id} className={className} onClick={props.onClick || null}>
+          <div id={id} className={className} onClick={props.onClick || null} onLoad={(e) => {
+            for ( const event of props.events ) {
+
+             if (event) {
+               e.target.addEventListener(event.typeEvent, event.functionEvent)
+             }
+
+            }
+            } }>
             {props.children}
           </div>
         );
