@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
+import React from "react";
 //import FakeText from "../../FakeText/FakeText";
 import './css/Home.css';
-import { esconder, exibir, Existe_Class, $ } from "../../funçoes/funçoes";
+import { esconder, exibir, Existe_Class, $, Adicionar_class, Remover_class } from "../../funçoes/funçoes";
 import Banner from "../../Layout/Banner/Banner";
 
 const Home = () => {
@@ -10,15 +10,25 @@ const Home = () => {
   ScrollMain_onScroll = () => {
     const 
     Header = document.querySelector(".Header"), 
-    Footer = document.querySelector(".Footer");
+    Footer = document.querySelector(".Footer"),
+    Header_Logo = $("#Header_Logo"),
+    Div_Nav = $("#Div_Nav");
 
     if (Existe_Class( $(".Container_Layout_Default").childNodes[0], "Home_Container" )) {
       if (scrollOld >= window.scrollY) {
-        esconder(Header);
+        //esconder(Header);
         exibir(Footer);
+        Adicionar_class(Header, "Animation_Header_moverTop_1b5Ab00bxvN");
+        Remover_class(Header, "Animation_Header_moverTop_c3Bp26yyxUn");
+        esconder(Header_Logo);
+        esconder(Div_Nav);
       } else {
         esconder(Footer);
-        exibir(Header);
+        //exibir(Header);
+        Remover_class(Header, "Animation_Header_moverTop_1b5Ab00bxvN");
+        Adicionar_class(Header, "Animation_Header_moverTop_c3Bp26yyxUn");
+        exibir(Header_Logo);
+        exibir(Div_Nav);
       }
       scrollOld = window.scrollY;
     } else {

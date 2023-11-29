@@ -7,7 +7,7 @@ function Nav(props) {
   const url = "/about/" + props.name;
   return (
     <nav 
-    id = {props.id ? props.id : "Nav" + genKey(5) } 
+    id = {props.id ? props.id + "_Nav" : "Nav" + genKey(5) } 
     className={props.className ? props.className + " Nav" : "Nav"} 
     style={props.style ? props.style : null } >
         <div className='flex-row Nav_div'>
