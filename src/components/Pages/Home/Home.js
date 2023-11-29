@@ -12,7 +12,7 @@ const Home = () => {
     Header = document.querySelector(".Header"), 
     Footer = document.querySelector(".Footer"),
     Header_Logo = $("#Header_Logo"),
-    Div_Nav = $("#Div_Nav");
+    Div_Header_Nav = $("#Div_Header_Nav");
 
     if (Existe_Class( $(".Container_Layout_Default").childNodes[0], "Home_Container" )) {
       if (scrollOld >= window.scrollY) {
@@ -21,14 +21,14 @@ const Home = () => {
         Adicionar_class(Header, "Animation_Header_moverTop_1b5Ab00bxvN");
         Remover_class(Header, "Animation_Header_moverTop_c3Bp26yyxUn");
         esconder(Header_Logo);
-        esconder(Div_Nav);
+        esconder(Div_Header_Nav);
       } else {
         esconder(Footer);
         //exibir(Header);
         Remover_class(Header, "Animation_Header_moverTop_1b5Ab00bxvN");
         Adicionar_class(Header, "Animation_Header_moverTop_c3Bp26yyxUn");
         exibir(Header_Logo);
-        exibir(Div_Nav);
+        exibir(Div_Header_Nav);
       }
       scrollOld = window.scrollY;
     } else {

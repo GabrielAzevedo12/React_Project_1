@@ -33,7 +33,7 @@ function Header() {
       <div id="Header_Logo" className="center Logo">
         This is Logo
       </div>
-      <div id="Div_Nav" className='flex-row'>
+      <div id="Div_Header_Nav" className='flex-row Div_Nav'>
         <ButtonDinamico id="Nav" className="center">       
           <BsChevronDoubleLeft id="ButtonDinamico_Nav_left" className='ButtonDinamico_Nav Animation_ButtonDinamico_Nav_moverLeft_gM70YiCU9x4' onClick = {ButtonDinamico_onClick} /> 
         </ButtonDinamico>
