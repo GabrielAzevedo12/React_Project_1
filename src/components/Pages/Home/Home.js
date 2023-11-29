@@ -20,20 +20,17 @@ const Home = () => {
         exibir(Footer);
         Adicionar_class(Header, "Animation_Header_moverTop_1b5Ab00bxvN");
         Remover_class(Header, "Animation_Header_moverTop_c3Bp26yyxUn");
-        esconder(Header_Logo);
-        esconder(Div_Header_Nav);
+        esconder([Header_Logo, Div_Header_Nav], true);
       } else {
         esconder(Footer);
         //exibir(Header);
         Remover_class(Header, "Animation_Header_moverTop_1b5Ab00bxvN");
         Adicionar_class(Header, "Animation_Header_moverTop_c3Bp26yyxUn");
-        exibir(Header_Logo);
-        exibir(Div_Header_Nav);
+        exibir([Header_Logo, Div_Header_Nav],true);
       }
       scrollOld = window.scrollY;
     } else {
-      exibir(Footer);
-      exibir(Header);
+      exibir(Footer,Header);
     }
     
   };

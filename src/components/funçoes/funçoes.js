@@ -74,15 +74,27 @@ Adicionar_class = (e, name_class) => {
     e["style"]["width"] = w_new + "px";
     e["style"]["height"] = h_new + "px";
   },
-  esconder = (e) => {
-    console.log(e)
+  esconder = (e, variosArgs) => {
+
+   if(variosArgs) {
+    for ( let x of e) {
+      x.style.display = "none";  
+    }
+   } else {
     e.style.display = "none";
-    console.log(e.style.display)
+   }
+
   },
-  exibir = (e) => {
-    console.log(e)
-    e.style.display = "";
-    console.log(e.style.display)
+  exibir = (e, variosArgs) => {
+
+    if(variosArgs) {
+      for ( let x of e) {
+        x.style.display = "";  
+      }
+     } else {
+      e.style.display = "";
+     }
+
   },
 
   sucessor_n = (n) => ( n+1 ),
