@@ -1,6 +1,5 @@
 .Animation_Header_moverTop_c3Bp26yyxUn {
     animation: Animation_Header_moverTop_c3Bp26yyxUn 1s 1;
-    --heightBanner1: 30vh;
     height: var(--heightHeader);
     min-height: var(--heightHeader);
 }
