@@ -17,24 +17,26 @@ const Home = () => {
     if (Existe_Class( $(".Container_Layout_Default").childNodes[0], "Home_Container" )) {
       if (scrollOld >= window.scrollY) {
         //esconder(Header);
-        exibir(Footer);
+        //exibir(Footer);
         Adicionar_class(Header, "Animation_Header_moverTop_1b5Ab00bxvN");
         Remover_class(Header, "Animation_Header_moverTop_c3Bp26yyxUn");
+        Remover_class(Header, "Animation_Header_AlterarDimensoes");
         esconder([Header_Logo, Div_Header_Nav], true);
         Adicionar_class(Footer, "Animation_Footer_moverTop_59gFfkGIGd7");
         Remover_class(Footer, "Animation_Footer_moverTop_ocf0krF3qPr");
       } else {
-        esconder(Footer);
+        //esconder(Footer);
         //exibir(Header);
         Remover_class(Header, "Animation_Header_moverTop_1b5Ab00bxvN");
         Adicionar_class(Header, "Animation_Header_moverTop_c3Bp26yyxUn");
+        Adicionar_class(Header, "Animation_Header_AlterarDimensoes");
         exibir([Header_Logo, Div_Header_Nav],true);
         Remover_class(Footer, "Animation_Footer_moverTop_59gFfkGIGd7");
         Adicionar_class(Footer, "Animation_Footer_moverTop_ocf0krF3qPr");
       }
       scrollOld = window.scrollY;
     } else {
-      exibir(Footer,Header);
+      exibir([Footer,Header],1);
     }
     
   };

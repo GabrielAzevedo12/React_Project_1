@@ -29,7 +29,7 @@ function Header() {
   }
 
   return (
-    <div className="Header flex-row style_template_2 Animation_Header_moverTop_c3Bp26yyxUn">
+    <div id="Header" className="Header flex-row Animation_Header_AlterarDimensoes Animation_Header_moverTop_c3Bp26yyxUn">
       <div id="Header_Logo" className="center Logo">
         This is Logo
       </div>

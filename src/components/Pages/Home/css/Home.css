@@ -5,8 +5,8 @@
         max-height: 99vh;
         max-width: 99vw;
         */
-        min-height: 99vh;
-        min-width: 99vw;
+        min-height: 100vh;
+        min-width: 100vw;
         background-color: black;
         color: rgb(125, 125, 158);
         font-size: 5rem;

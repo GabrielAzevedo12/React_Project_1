@@ -1,7 +1,7 @@
 import React from "react";
-import './css/Banner1.css';
 import BannerGeral from "../../BannerGeral/BannerGeral";
 import SubBanner from "../../subBanner/subBanner";
+import './css/Banner1.css';
 import './css/Banner1_subBanner1.css'
 import './css/Banner1_subBanner2.css'
 import './css/Banner1_subBanner3.css'

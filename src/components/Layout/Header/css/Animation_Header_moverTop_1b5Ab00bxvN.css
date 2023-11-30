@@ -1,13 +1,14 @@
 .Animation_Header_moverTop_1b5Ab00bxvN {
     animation: Animation_Header_moverTop_1b5Ab00bxvN 1s 1;
+    --heightBanner1: 30vh;
     height: 0vh;
     min-height: 0vh;
 }
 
 @keyframes Animation_Header_moverTop_1b5Ab00bxvN {
     from {
-        height: 10vh;
-        min-height: 10vh;
+        height: var(--heightHeader);
+        min-height: var(--heightHeader);
     }
     to {
         height: 0vh;
