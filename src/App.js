@@ -2,6 +2,7 @@ import './App.css';
 import { Adicionar_class, Remover_class, Existe_Class, S1, S2, $, new_text, def_dimensoes } from './components/funçoes/funçoes'
 import Main from './components/Layout/Main/Main';
 import './propsGerais.css'
+import './opacity_animation.css'
 /*
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';

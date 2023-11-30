@@ -21,7 +21,10 @@ const Home = () => {
         Adicionar_class(Header, "Animation_Header_moverTop_1b5Ab00bxvN");
         Remover_class(Header, "Animation_Header_moverTop_c3Bp26yyxUn");
         Remover_class(Header, "Animation_Header_AlterarDimensoes");
-        esconder([Header_Logo, Div_Header_Nav], true);
+        Remover_class(Header_Logo, "opacity_from_0_to_100");
+        Remover_class(Div_Header_Nav, "opacity_from_0_to_100");
+        Adicionar_class(Header_Logo, "opacity_from_100_to_0");
+        Adicionar_class(Div_Header_Nav, "opacity_from_100_to_0");
         Adicionar_class(Footer, "Animation_Footer_moverTop_59gFfkGIGd7");
         Remover_class(Footer, "Animation_Footer_moverTop_ocf0krF3qPr");
       } else {
@@ -29,6 +32,10 @@ const Home = () => {
         //exibir(Header);
         Remover_class(Header, "Animation_Header_moverTop_1b5Ab00bxvN");
         Adicionar_class(Header, "Animation_Header_moverTop_c3Bp26yyxUn");
+        Remover_class(Header_Logo, "opacity_from_100_to_0");
+        Remover_class(Div_Header_Nav, "opacity_from_100_to_0");
+        Adicionar_class(Header_Logo, "opacity_from_0_to_100");
+        Adicionar_class(Div_Header_Nav, "opacity_from_0_to_100");
         //Adicionar_class(Header, "Animation_Header_AlterarDimensoes");
         exibir([Header_Logo, Div_Header_Nav],true);
         Remover_class(Footer, "Animation_Footer_moverTop_59gFfkGIGd7");
