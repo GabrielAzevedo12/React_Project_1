@@ -3,23 +3,27 @@ import './css/Text.css';
 
 const Text = ( props ) => { 
     const 
-    className =`${props.TextName}_Container Text ${props.className}`,
+    className =`${props.TextName}_Container Text center ${props.className || ""}`,
     id = `${props.TextName}`;
+
+    const analise_typeText = (typeText) => {
+        if(typeText === "h1") {
+            return (
+                <h1>
+                    {props.children}
+                </h1>)
+        }
+        if(typeText === "p") {
+            return (
+                <p>
+                    {props.children}
+                </p>)
+        }
+    }
 
     return (
       <div id={id} className={className}>
-       {
-        props.typeText_h1 && (
-        <h1>
-            {props.children}
-        </h1>)
-       }
-       {
-        props.typeText_p && (
-        <p>
-            {props.children}
-        </p>)
-       }
+        {analise_typeText(props.typeText)}
       </div> 
         );
 }

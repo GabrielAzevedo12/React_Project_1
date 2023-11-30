@@ -61,34 +61,34 @@
  
 }
 
- .flex-row {
+.flex-row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
   
-  .flex-wrap {
+.flex-wrap {
     flex-wrap: wrap;
   }
   
-  .flex-nowrap {
+.flex-nowrap {
     flex-wrap: nowrap;
   }
 
-  .flex-row-reverse {
+.flex-row-reverse {
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
   }
   
-  .flex-column {
+.flex-column {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: stretch;
   }
   
-  .center {
+.center {
     display: flex;
     align-items: center;
     justify-content: center;

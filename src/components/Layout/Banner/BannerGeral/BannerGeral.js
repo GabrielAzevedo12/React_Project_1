@@ -5,7 +5,7 @@ import { genKey } from "../../../funçoes/genRandomKey";
 
 const BannerGeral = ( props ) => { 
   const 
-   className =`${props.BannerName}_Container Banner ${props.className}`,
+   className =`${props.BannerName}_Container Banner ${props.className || ""}`,
    id = `${props.BannerName}`;
 
     return ( 

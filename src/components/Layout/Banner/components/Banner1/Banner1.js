@@ -5,6 +5,7 @@ import './css/Banner1.css';
 import './css/Banner1_subBanner1.css'
 import './css/Banner1_subBanner2.css'
 import './css/Banner1_subBanner3.css'
+import Text from "../../../Text/Text";
 
 const Banner1 = () => { 
   /*
@@ -20,7 +21,11 @@ const Banner1 = () => {
   */
     return (
       <BannerGeral BannerName="Banner1" className="flex-row flex-nowrap">
-        <SubBanner BannerPai="Banner1" indexItem={1} className=""/>
+        <SubBanner BannerPai="Banner1" indexItem={1} className="center">
+          <Text TextName="subBanner1_Text" typeText="h1"> 
+          subBanner1
+          </Text>
+        </SubBanner>
         <SubBanner BannerPai="Banner1" indexItem={2} className=""/>
         <SubBanner BannerPai="Banner1" indexItem={3} className=""/>
       </BannerGeral> 
