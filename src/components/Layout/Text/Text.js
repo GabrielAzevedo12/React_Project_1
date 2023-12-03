@@ -24,17 +24,13 @@ const Text = ( props ) => {
         if(typeText === "h1") {
             return (
                 <TextTitulo>
-                    <h1>
                         {props.children}
-                    </h1>   
                 </TextTitulo>)
         }
         if(typeText === "p") {
             return (
                 <TextParagrafo>
-                    <p>
                         {props.children}
-                    </p>
                 </TextParagrafo>)
         }
     }

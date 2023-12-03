@@ -1,4 +1,5 @@
   @media only screen and (min-width: 1024px) {
+    /*
     .Banner_Container {
       display: grid;
       grid-template-areas:
@@ -10,7 +11,7 @@
       gap: 10px;
       padding: 10px;
     }
-  
+  */
     .Banner {
       overflow-y: hidden;
       overflow-x: hidden;
