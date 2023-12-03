@@ -27,24 +27,13 @@ const Banner1 = () => {
    }
    `;
 
-// Here we create a component that will rotate everything we pass in over two seconds
    const StyledText = styled(Text)`
    display: inline-block;
-   animation: ${rotate} 2s linear infinite;
+   animation: ${rotate} 2s cubic-bezier(.79,2.01,.83,.67) infinite;
    padding: 2rem 1rem;
    font-size: 1.2rem;
    `;
-  /*
-    {
-                loadText ?
-                <Text TextName="subBanner1_Text" typeText="h1"> 
-                "subBannner1"
-                </Text> :
-                <StyledText TextName="Text_Load" typeText="h1"> 
-                  <AiOutlineLoading/>
-                </StyledText>
-              }
-               */
+
     return (
       <BannerGeral BannerName="Banner1" className="flex-row flex-nowrap">
         <SubBanner BannerPai="Banner1" indexItem={1} className="center">
