@@ -34,12 +34,8 @@ const Banner1 = () => {
    padding: 2rem 1rem;
    font-size: 1.2rem;
    `;
-  
-    return (
-      <BannerGeral BannerName="Banner1" className="flex-row flex-nowrap">
-        <SubBanner BannerPai="Banner1" indexItem={1} className="center">
-            <Text TextName="subBanner1_Text" typeText="h1"> 
-              {
+  /*
+    {
                 loadText ?
                 <Text TextName="subBanner1_Text" typeText="h1"> 
                 "subBannner1"
@@ -48,7 +44,19 @@ const Banner1 = () => {
                   <AiOutlineLoading/>
                 </StyledText>
               }
-            </Text>
+               */
+    return (
+      <BannerGeral BannerName="Banner1" className="flex-row flex-nowrap">
+        <SubBanner BannerPai="Banner1" indexItem={1} className="center">
+        {
+                loadText ?
+                <Text TextName="subBanner1_Text" typeText="h1"> 
+                subBannner
+                </Text> :
+                <StyledText TextName="Text_Load" typeText="h1"> 
+                  <AiOutlineLoading/>
+                </StyledText>
+        }
         </SubBanner>
         <SubBanner BannerPai="Banner1" indexItem={2} className=""/>
         <SubBanner BannerPai="Banner1" indexItem={3} className=""/>

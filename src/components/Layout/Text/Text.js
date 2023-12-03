@@ -23,11 +23,9 @@ const Text = ( props ) => {
     }
 
     return (
-        <Text>
             <div id={id} className={className}>
                 {analise_typeText(props.typeText)}
             </div>
-        </Text> 
         );
 }
 
