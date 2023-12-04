@@ -1,6 +1,6 @@
 //import logo from './logo.svg';
 import './css/Nav.css';
-import { BrowserRouter as Router, Route, Link, Routes, redirect as Redirect } from "react-router-dom";
+import {  Link } from "react-router-dom";
 import { genKey } from '../../funçoes/genRandomKey';
 
 function Nav(props) {

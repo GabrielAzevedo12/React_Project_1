@@ -4,6 +4,7 @@ import './css/ButtonDinamico.css';
 import './css/ButtonDinamico_Nav.css';
 import "./css/Animation_ButtonDinamico_Nav_moverLeft_d98V0w.css"
 import "./css/Animation_ButtonDinamico_Nav_moverLeft_gM70YiCU9x4.css"
+import styled from 'styled-components';
 //import { BrowserRouter as Router, Route, Link, Routes, redirect as Redirect } from "react-router-dom";
 
 function ButtonDinamico( props ) {
@@ -11,6 +12,10 @@ function ButtonDinamico( props ) {
     className = `ButtonDinamico ${props.className}`,
     id=`ButtonDinamico_${props.id}`;
     //element = props.icon || "" ;
+
+    const ButtonDinamico = styled.div`
+    
+    `
 
   return (
     <div 
