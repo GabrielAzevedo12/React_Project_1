@@ -12,6 +12,12 @@ import styled from "styled-components";
 
 const Banner = ( props ) => { 
   
+  const displayColumn = `
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;` ;
+
   const Banner = styled.div`
     display: grid;
     grid-template-areas:
@@ -38,10 +44,7 @@ const Banner = ( props ) => {
     }
     
     @media (max-width: 425px) {
-      display: flex;
-      flex-direction: column;
-      justify-content: stretch;
-      align-items: stretch;
+      ${displayColumn}
       }`
 
     return ( 
