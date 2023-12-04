@@ -1,4 +1,3 @@
-@media only screen and (min-width: 1024px) {
 .Animation_Header_AlterarDimensoes:hover {
     animation: Animation_Header_AlterarDimensoes1 1s cubic-bezier(.52,1.51,.83,.67);
     background: rgb(45, 59, 71) ;
@@ -45,4 +44,3 @@
     }
   }
 
-}

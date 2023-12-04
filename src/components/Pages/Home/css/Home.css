@@ -1,5 +1,4 @@
-@media only screen and (min-width: 1024px) {
-    .Home_Container {
+.Home_Container {
         grid-area: Main;
         /*
         max-height: 99vh;
@@ -13,4 +12,3 @@
         z-index: 1;
         /*overflow-y: scroll;*/
     }
-  }

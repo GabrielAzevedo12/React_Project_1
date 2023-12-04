@@ -1,14 +1,6 @@
-@media only screen and (min-width: 1024px) {
 .Nav {
     grid-area: Nav;
-    /*
-    max-height: 100vh;
-    */
     min-width: 40vw;
-    /*
-    background-color: rgb(69, 111, 150);
-    color: rgb(155, 158, 125);
-    */
 }
 .Nav_div {
     justify-content: space-between;
@@ -29,5 +21,4 @@ a.Nav_lista_item_a:hover {
     font-weight: 600;
 }
 
-}
 

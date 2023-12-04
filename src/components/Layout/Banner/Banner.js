@@ -13,7 +13,6 @@ import styled from "styled-components";
 const Banner = ( props ) => { 
   
   const Banner = styled.div`
-  @media only screen and (min-width: 1024px) {
     display: grid;
     grid-template-areas:
     ${ props => `
@@ -24,7 +23,26 @@ const Banner = ( props ) => {
     "${props.Item5} ${props.Item4} ${props.Item4} ${props.Item4} ${props.Item4} ${props.Item4}"` };
     gap: 10px;
     padding: 10px;
-  }`
+
+    @media (max-width: 760px) {
+    display: grid;
+    grid-template-areas:
+    ${ props => `
+    "${props.ItemNull}"
+    "${props.Item1}"
+    "${props.Item2}"
+    "${props.Item3}"
+    "${props.Item4}"
+    "${props.Item5}"` };
+    grid-template-columns: 1fr;
+    }
+    
+    @media (max-width: 425px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      align-items: stretch;
+      }`
 
     return ( 
       <Banner ItemNull="BannerBlank" Item1="Banner1" Item2="Banner2" Item3="Banner3" Item4="Banner4" Item5="Banner5">
