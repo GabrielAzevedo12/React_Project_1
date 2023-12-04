@@ -16,22 +16,33 @@ import FlexRow from "../../../flexRow.css";
  */
 const About = ({ name }) => {
     const navigate = useNavigate();
-    const About = styled.h1`
-    font-size: 2rem;
+    const About = styled.div`
+    & h1 {
+    font-size: 5rem;
+    }
+
+    & > div {
+      width: 100vw;
+      min-height: 100vh;
+      }
+    
+    & div.rotasSobre {
+        min-width: 50vh;
+        }
     `
 
     return (
       <About>
         <FlexColumn justifyContent={"center"} alignItems={"center"}>
           <h1>About</h1>
-          <Text TextName="Text_About" typeText="p" fontSize={"1.3rem"} color={"rgb(66, 71, 117)"}>
-              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+          <Text TextName="Text_About" typeText="p" fontSize={"1.3rem"} color={"rgb(66, 71, 117)"} className={"flex-row flex-wrap"}>
+              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           </Text>
-          <FlexRow justifyContent={"space-evenly"}>
+          <FlexRow justifyContent={"space-evenly"} className={"rotasSobre"}>
             <ButtonDinamico onClick={() => navigate('/') } > 
               Go to Home
             </ButtonDinamico> 

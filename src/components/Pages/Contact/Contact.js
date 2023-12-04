@@ -11,8 +11,19 @@ import FlexRow from "../../../flexRow.css.js";
 
 const Contact = () => {
     const navigate = useNavigate();
-    const Contact = styled.h1`
-    font-size: 2rem;
+    const Contact = styled.div`
+    & h1 {
+        font-size: 5rem;   
+    }
+
+    & > div {
+        width: 100vw;
+        min-height: 100vh;
+        }
+
+    & div.RotasContato {
+        min-width: 50vw;
+        }    
     `
     const Email = styled.div`
     ${flexRow}
@@ -49,7 +60,7 @@ const Contact = () => {
                         Rua xxx, n° xxx  bairo xxx CEP xxx .
                     </Text>
                 </Endereço>
-                <FlexRow justifyContent={"space-evenly"}>
+                <FlexRow justifyContent={"space-evenly"} className="RotasContato">
                     <ButtonDinamico onClick={() => navigate('/') } > 
                         Go to Home
                     </ButtonDinamico> 

@@ -9,11 +9,6 @@ const FlexColumn = ( props ) => {
     ${ (props) => props.justifyContent ||"stretch" };
     align-items: 
     ${ (props) => props.alignItems || "stretch" };
-    height: 
-    ${ (props) => props.Height || "100vh" };
-    width: 
-    ${ (props) => props.Width || "100vw" };  
-
     background-color: black;
     color: rgb(125, 125, 158);
     `
@@ -37,4 +32,9 @@ min-height:
     ${ (props) => props.minHeight || "100vh" };
     min-width: 
     ${ (props) => props.minWidth || "100vw" };    
+
+height: 
+    ${ (props) => props.Height || "100vh" };
+    width: 
+    ${ (props) => props.Width || "100vw" };      
 */
