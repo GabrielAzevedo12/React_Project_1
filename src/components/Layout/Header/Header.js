@@ -52,11 +52,11 @@ function Header() {
   position: relative;
   animation: ${ rotate180 ? ButtonDinamico_Nav_rotate180deg : ButtonDinamico_Nav_rotate0deg } 1s 1;
   rotate: ${ rotate180 ? "180deg" : "0deg" } ;
-  left: ${ rotate180 ? "-10px" : "-10px" } ;
+  left: -25px ;
    `;
 
   return (
-    <div id="Header" className="Header flex-row Animation_Header_AlterarDimensoes Animation_Header_moverTop_c3Bp26yyxUn" onMouseOver={Header_onMouseOver}>
+    <div id="Header" className="Header flex-row Animation_Header_AlterarDimensoes" onMouseOver={Header_onMouseOver}>
       <div id="Header_Logo" className="center Logo">
         This is Logo
       </div>

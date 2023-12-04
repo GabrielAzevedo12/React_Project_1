@@ -8,7 +8,7 @@ const SubBanner = ( props ) => {
    id = `${props.BannerPai}_subBanner${props.indexItem}`;
 
     return ( 
-          <div id={id} className={className} onClick={props.events ? props.events.onClick || null : undefined} onMouseOver={props.events ? props.events.onMouseOver || null : undefined} >
+          <div id={id} className={className} onClick={props.events ? props.events.onClick || null : undefined} onMouseOver={props ? props.onMouseOver : undefined } >
             {props.children}
           </div>
         );

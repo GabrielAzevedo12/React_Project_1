@@ -2,11 +2,9 @@ import { keyframes } from "styled-components"
 
 const ButtonDinamico_Nav_rotate180deg = keyframes`
 from {
-    left: 0px;
     rotate: 0deg;
 }
 to {
-    left: -10px;
     rotate: 180deg;
 }
 `
