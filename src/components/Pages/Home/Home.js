@@ -14,7 +14,9 @@ const Home = () => {
     Header_Logo = $("#Header_Logo"),
     Div_Header_Nav = $("#Div_Header_Nav");
 
-    if (Existe_Class( $(".Container_Layout_Default").childNodes[0], "Home_Container" )) {
+    console.log(1);
+
+    if ( Existe_Class( $(".Container_Layout_Default").childNodes[0], "Home_Container" ) ) {
       if (scrollOld >= window.scrollY) {
         //esconder(Header);
         //exibir(Footer);

@@ -111,6 +111,7 @@
   background: linear-gradient(rgb(66, 92, 117), transparent);
   color: rgb(8, 19, 29);
   box-shadow: 0px 0px 50px 50px rgb(66, 92, 117), 0px 0px 50px 50px black; 
+  /*color: rgb(90, 101, 202);*/
 }
 
 .style_template_2 {

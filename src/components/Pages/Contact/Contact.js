@@ -1,15 +1,55 @@
-import React, { Fragment } from "react";
+import React from "react";
 //import FakeText from "../../FakeText/FakeText";
 import { useNavigate } from 'react-router-dom';
 import './css/Contact.css'
+import styled from "styled-components";
+import FlexColumn from "../../../flexColumn.css";
+import Text from "../../Layout/Text/Text";
+import { flexRow } from "../../../propsGerais.css.js";
 
 const Contact = () => {
     const navigate = useNavigate();
+    const Contact = styled.h1`
+    font-size: 2rem;
+    `
+    const Email = styled.div`
+    ${flexRow}
+    
+    & p {
+        padding-right: 10px;
+    }
+    `
+    const Endereço = styled.div`
+    ${flexRow}
+    
+    & p {
+        padding-right: 10px;
+    }
+    `
+
     return (
-        <div className="div_contact flex-column center">
-         <h1>Contact</h1>
-         <button onClick={() => navigate('/') } >Go to Home</button>
-        </div>
+        <Contact>
+            <FlexColumn center={"center"}>
+                <h1>Contact</h1>
+                <Email>
+                    <Text TextName="Text_Email_prop" typeText="p" fontSize={"1.5rem"} color={"rgb(66, 71, 117)"}>
+                        Email :
+                    </Text>
+                    <Text TextName="Text_Email_valor" typeText="p" fontSize={"1.3rem"} color={"rgb(90, 101, 202)"}>
+                        xxx@xxx.com
+                    </Text>
+                </Email>
+                <Endereço>
+                    <Text TextName="Text_Endereço_prop" typeText="p" fontSize={"1.5rem"} color={"rgb(66, 71, 117)"}>
+                        Endereço :
+                    </Text>
+                    <Text TextName="Text_Endereço_valor" typeText="p" fontSize={"1.3rem"} color={"rgb(90, 101, 202)"}>
+                        Rua xxx, n° xxx  bairo xxx CEP xxx .
+                    </Text>
+                </Endereço>
+                <button onClick={() => navigate('/') } >Go to Home</button> 
+            </FlexColumn>
+        </Contact>
         );
 }
 

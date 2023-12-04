@@ -9,14 +9,9 @@ import Banner4 from "./components/Banner4/Banner4";
 import Banner5 from "./components/Banner5/Banner5";
 import BannerGeral from "./BannerGeral/BannerGeral";
 import styled from "styled-components";
+import { flexColumn as displayColumn } from "../../../propsGerais.css.js";
 
 const Banner = ( props ) => { 
-  
-  const displayColumn = `
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-  align-items: stretch;` ;
 
   const Banner = styled.div`
     display: grid;

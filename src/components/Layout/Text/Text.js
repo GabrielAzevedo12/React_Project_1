@@ -12,33 +12,33 @@ const Text = ( props ) => {
     const TextTitulo = styled.h1`
     text-align: center;
     font-size: 4rem;
-    color: rgb(24, 24, 24);
+    color: ${ (props) => props.color || "rgb(24, 24, 24)" } ;
     font-family: cursive;`
 
-    const TextParagrafo = styled.h1`
+    const TextParagrafo = styled.p`
     text-align: center;
-    font-size: 1.2rem;
-    color: rgb(38, 54, 54);`
+    font-size:  ${ (props) => props.fontSize || "1.2rem" } ;
+    color: ${ (props) => props.color || "rgb(38, 54, 54)" } ;`
 
     const analise_typeText = (typeText) => {
         if(typeText === "h1") {
             return (
-                <TextTitulo>
+                <TextTitulo id={id} className={className} fontSize={props.fontSize} color={props.color}>
                         {props.children}
                 </TextTitulo>)
         }
         if(typeText === "p") {
             return (
-                <TextParagrafo>
+                <TextParagrafo id={id} className={className} fontSize={props.fontSize} color={props.color}>
                         {props.children}
                 </TextParagrafo>)
         }
     }
 
     return (
-            <div id={id} className={className}>
-                {analise_typeText(props.typeText)}
-            </div>
+        <>
+        {analise_typeText(props.typeText)}
+        </>
         );
 }
 
