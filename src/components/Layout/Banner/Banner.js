@@ -10,22 +10,24 @@ import Banner5 from "./components/Banner5/Banner5";
 import BannerGeral from "./BannerGeral/BannerGeral";
 import styled from "styled-components";
 
-const Banner = () => { 
+const Banner = ( props ) => { 
+  
   const Banner = styled.div`
   @media only screen and (min-width: 1024px) {
-      display: grid;
-      grid-template-areas:
-      'BannerBlank BannerBlank BannerBlank BannerBlank BannerBlank BannerBlank'
-      'Banner1 Banner1 Banner1 Banner1 Banner1 Banner1'
-      'Banner3 Banner2 Banner2 Banner2 Banner2 Banner2'
-      'Banner3 Banner4 Banner4 Banner4 Banner4 Banner4'
-      'Banner5 Banner4 Banner4 Banner4 Banner4 Banner4';
-      gap: 10px;
-      padding: 10px;
-    }`
+    display: grid;
+    grid-template-areas:
+    ${ props => `
+    "${props.ItemNull} ${props.ItemNull} ${props.ItemNull} ${props.ItemNull} ${props.ItemNull} ${props.ItemNull}"
+    "${props.Item1} ${props.Item1} ${props.Item1} ${props.Item1} ${props.Item1} ${props.Item1}"
+    "${props.Item3} ${props.Item2} ${props.Item2} ${props.Item2} ${props.Item2} ${props.Item2}"
+    "${props.Item3} ${props.Item4} ${props.Item4} ${props.Item4} ${props.Item4} ${props.Item4}"
+    "${props.Item5} ${props.Item4} ${props.Item4} ${props.Item4} ${props.Item4} ${props.Item4}"` };
+    gap: 10px;
+    padding: 10px;
+  }`
 
     return ( 
-      <Banner>
+      <Banner ItemNull="BannerBlank" Item1="Banner1" Item2="Banner2" Item3="Banner3" Item4="Banner4" Item5="Banner5">
             <BannerGeral BannerName="BannerBlank" />
             <Banner1/>
             <Banner2/>
