@@ -28,7 +28,7 @@ const Banner1 = () => {
    `;
 
    const StyledText = styled(Text)`
-   display: inline-block;
+   position: relative;
    animation: ${rotate} 2s cubic-bezier(.79,2.01,.83,.67) infinite;
    padding: 2rem 1rem;
    font-size: 1.2rem;

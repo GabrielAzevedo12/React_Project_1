@@ -6,6 +6,8 @@ import styled from "styled-components";
 import FlexColumn from "../../../flexColumn.css";
 import Text from "../../Layout/Text/Text";
 import { flexRow } from "../../../propsGerais.css.js";
+import ButtonDinamico from "../../Layout/ButtonDinamico/ButtonDinamico.js";
+import FlexRow from "../../../flexRow.css.js";
 
 const Contact = () => {
     const navigate = useNavigate();
@@ -14,7 +16,7 @@ const Contact = () => {
     `
     const Email = styled.div`
     ${flexRow}
-    
+
     & p {
         padding-right: 10px;
     }
@@ -29,7 +31,7 @@ const Contact = () => {
 
     return (
         <Contact>
-            <FlexColumn center={"center"}>
+            <FlexColumn justifyContent={"center"} alignItems={"center"}>
                 <h1>Contact</h1>
                 <Email>
                     <Text TextName="Text_Email_prop" typeText="p" fontSize={"1.5rem"} color={"rgb(66, 71, 117)"}>
@@ -47,7 +49,14 @@ const Contact = () => {
                         Rua xxx, n° xxx  bairo xxx CEP xxx .
                     </Text>
                 </Endereço>
-                <button onClick={() => navigate('/') } >Go to Home</button> 
+                <FlexRow justifyContent={"space-evenly"}>
+                    <ButtonDinamico onClick={() => navigate('/') } > 
+                        Go to Home
+                    </ButtonDinamico> 
+                    <ButtonDinamico onClick={() => navigate('/about') } > 
+                         Sobre
+                    </ButtonDinamico> 
+                </FlexRow>
             </FlexColumn>
         </Contact>
         );

@@ -3,30 +3,37 @@ import { useState } from 'react';
 import ButtonDinamico from '../ButtonDinamico/ButtonDinamico';
 import Nav from '../Nav/Nav';
 import { BsChevronDoubleLeft } from "react-icons/bs";
+import styled from 'styled-components';
 import './css/Header.css';
 import './css/Animation_Header_moverTop_1b5Ab00bxvN.css'
 import './css/Animation_Header_moverTop_c3Bp26yyxUn.css'
 import './css/Animation_Header_AlterarDimensoes.css'
-import { $, Adicionar_class, Existe_Class, Remover_class, esconder, exibir } from '../../funçoes/funçoes';
+import { $, Adicionar_class, Existe_Class, Remover_class } from '../../funçoes/funçoes';
+import { ButtonDinamico_Nav_rotate0deg } from '../ButtonDinamico/css/Animation_ButtonDinamico_Nav_moverLeft_gM70YiCU9x4.css.js';
+import { ButtonDinamico_Nav_rotate180deg } from '../ButtonDinamico/css/Animation_ButtonDinamico_Nav_moverLeft_d98V0w.css.js';
 
 function Header() {
   const [boolean, setBoolean] = useState(false);
+  const [rotate180, setRotate180] = useState(false);
 
   const ButtonDinamico_onClick = (e) => {
     //$("#Header_Nav").style.display === "none"
     if ( boolean === false ) {
-      //exibir($("#Header_Nav")) ;
       setBoolean(true) ;
+      setRotate180(true);
+/*
       Adicionar_class($("#ButtonDinamico_Nav_left"), "Animation_ButtonDinamico_Nav_moverLeft_d98V0w");
       Remover_class($("#ButtonDinamico_Nav_left"), "Animation_ButtonDinamico_Nav_moverLeft_gM70YiCU9x4");
-      console.log($("#ButtonDinamico_Nav_left"))
-
+      console.log(1)
+*/
     } else {
-      //esconder($("#Header_Nav"))
       setBoolean(false) ;
+      setRotate180(false)
+      /*
       Remover_class($("#ButtonDinamico_Nav_left"), "Animation_ButtonDinamico_Nav_moverLeft_d98V0w");
       Adicionar_class($("#ButtonDinamico_Nav_left"), "Animation_ButtonDinamico_Nav_moverLeft_gM70YiCU9x4");
-      console.log($("#ButtonDinamico_Nav_left"))
+      console.log(2)
+      */
     }
 
   },
@@ -41,6 +48,13 @@ function Header() {
    
   };
 
+  const StyledBsChevronDoubleLeft = styled(BsChevronDoubleLeft)`
+  position: relative;
+  animation: ${ rotate180 ? ButtonDinamico_Nav_rotate180deg : ButtonDinamico_Nav_rotate0deg } 1s 1;
+  rotate: ${ rotate180 ? "180deg" : "0deg" } ;
+  left: ${ rotate180 ? "-10px" : "-10px" } ;
+   `;
+
   return (
     <div id="Header" className="Header flex-row Animation_Header_AlterarDimensoes Animation_Header_moverTop_c3Bp26yyxUn" onMouseOver={Header_onMouseOver}>
       <div id="Header_Logo" className="center Logo">
@@ -48,7 +62,7 @@ function Header() {
       </div>
       <div id="Div_Header_Nav" className='flex-row Div_Nav'>
         <ButtonDinamico id="Nav" className="center">       
-          <BsChevronDoubleLeft id="ButtonDinamico_Nav_left" className='ButtonDinamico_Nav Animation_ButtonDinamico_Nav_moverLeft_gM70YiCU9x4' onClick = {ButtonDinamico_onClick} /> 
+          <StyledBsChevronDoubleLeft id="ButtonDinamico_Nav_left" className='ButtonDinamico_Nav Animation_ButtonDinamico_Nav_moverLeft_gM70YiCU9x4' onClick = {ButtonDinamico_onClick} /> 
         </ButtonDinamico>
         {boolean && (
         <Nav name="Teste" id="Header"/>

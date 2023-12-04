@@ -32,8 +32,9 @@ function ButtonDinamico( props ) {
     <ButtonDinamico 
     id = { props.id ? id : "ButtonDinamico" + genKey(5) } 
     className={props.className ? className : "ButtonDinamico"} 
-    style={props.style ? props.style : null }>
-        {props.children}
+    style={props.style ? props.style : null }
+    onClick={ props.onClick || undefined }>
+        {props.children}    
     </ButtonDinamico>
   );
 }

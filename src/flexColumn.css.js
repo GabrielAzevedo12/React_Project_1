@@ -6,9 +6,9 @@ const FlexColumn = ( props ) => {
     display: flex;
     flex-direction: column;
     justify-content: 
-    ${ (props) => props.center ||"stretch" };
+    ${ (props) => props.justifyContent ||"stretch" };
     align-items: 
-    ${ (props) => props.center || "stretch" };
+    ${ (props) => props.alignItems || "stretch" };
     height: 
     ${ (props) => props.Height || "100vh" };
     width: 
@@ -19,7 +19,7 @@ const FlexColumn = ( props ) => {
     `
 
     return (
-        <FlexColumn center={props.center} maxHeight={props.maxHeight} maxWidth={props.maxWidth} minHeight={props.minHeight} minWidth={props.minWidth} Height={props.Height} Width={props.Width}>
+        <FlexColumn justifyContent={props.justifyContent} alignItems={props.alignItems} maxHeight={props.maxHeight} maxWidth={props.maxWidth} minHeight={props.minHeight} minWidth={props.minWidth} Height={props.Height} Width={props.Width}>
             {props.children}
         </FlexColumn>
         );
