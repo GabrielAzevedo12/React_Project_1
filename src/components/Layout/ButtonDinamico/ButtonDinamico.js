@@ -14,16 +14,27 @@ function ButtonDinamico( props ) {
     //element = props.icon || "" ;
 
     const ButtonDinamico = styled.div`
-    
-    `
+      font-size: 1.4rem;
+      list-style-type: none;
+      color: rgb(132, 150, 165);
+      font-weight: 700;
+
+      &:hover {
+
+      font-size: 1.5rem;
+      color: rgb(54, 119, 98);
+      font-weight: 600;
+      z-index:10;
+
+    }`
 
   return (
-    <div 
+    <ButtonDinamico 
     id = { props.id ? id : "ButtonDinamico" + genKey(5) } 
     className={props.className ? className : "ButtonDinamico"} 
     style={props.style ? props.style : null }>
         {props.children}
-    </div>
+    </ButtonDinamico>
   );
 }
 

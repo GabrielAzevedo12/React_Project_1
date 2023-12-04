@@ -19,12 +19,14 @@ function Header() {
       setBoolean(true) ;
       Adicionar_class($("#ButtonDinamico_Nav_left"), "Animation_ButtonDinamico_Nav_moverLeft_d98V0w");
       Remover_class($("#ButtonDinamico_Nav_left"), "Animation_ButtonDinamico_Nav_moverLeft_gM70YiCU9x4");
+      console.log($("#ButtonDinamico_Nav_left"))
 
     } else {
       //esconder($("#Header_Nav"))
       setBoolean(false) ;
       Remover_class($("#ButtonDinamico_Nav_left"), "Animation_ButtonDinamico_Nav_moverLeft_d98V0w");
       Adicionar_class($("#ButtonDinamico_Nav_left"), "Animation_ButtonDinamico_Nav_moverLeft_gM70YiCU9x4");
+      console.log($("#ButtonDinamico_Nav_left"))
     }
 
   },
