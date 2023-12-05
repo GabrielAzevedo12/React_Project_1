@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-const FlexColumn = ( props ) => {
-    
-    const FlexColumn = styled.div`
+const StyledFlexColumn = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: 
@@ -13,10 +11,11 @@ const FlexColumn = ( props ) => {
     color: rgb(125, 125, 158);
     `
 
+const FlexColumn = ( props ) => {
     return (
-        <FlexColumn justifyContent={props.justifyContent} alignItems={props.alignItems} maxHeight={props.maxHeight} maxWidth={props.maxWidth} minHeight={props.minHeight} minWidth={props.minWidth} Height={props.Height} Width={props.Width}>
+        <StyledFlexColumn justifyContent={props.justifyContent} alignItems={props.alignItems} maxHeight={props.maxHeight} maxWidth={props.maxWidth} minHeight={props.minHeight} minWidth={props.minWidth} Height={props.Height} Width={props.Width}>
             {props.children}
-        </FlexColumn>
+        </StyledFlexColumn>
         );
 }
 

@@ -14,9 +14,7 @@ import FlexRow from "../../../flexRow.css";
           <h1>About { name }</h1>
         </>
  */
-const About = ({ name }) => {
-    const navigate = useNavigate();
-    const About = styled.div`
+const StyledAbout = styled.div`
     & h1 {
     font-size: 5rem;
     }
@@ -30,9 +28,11 @@ const About = ({ name }) => {
         min-width: 50vh;
         }
     `
+const About = ({ name }) => {
+    const navigate = useNavigate();
 
     return (
-      <About>
+      <StyledAbout>
         <FlexColumn justifyContent={"center"} alignItems={"center"}>
           <h1>About</h1>
           <Text TextName="Text_About" typeText="p" fontSize={"1.3rem"} color={"rgb(66, 71, 117)"} className={"flex-row flex-wrap"}>
@@ -51,7 +51,7 @@ const About = ({ name }) => {
             </ButtonDinamico> 
           </FlexRow>
         </FlexColumn>
-      </About>
+      </StyledAbout>
         );
 }
 

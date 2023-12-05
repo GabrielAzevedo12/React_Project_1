@@ -9,9 +9,7 @@ import { flexRow } from "../../../propsGerais.css.js";
 import ButtonDinamico from "../../Layout/ButtonDinamico/ButtonDinamico.js";
 import FlexRow from "../../../flexRow.css.js";
 
-const Contact = () => {
-    const navigate = useNavigate();
-    const Contact = styled.div`
+const StyledContact = styled.div`
     & h1 {
         font-size: 5rem;   
     }
@@ -40,8 +38,11 @@ const Contact = () => {
     }
     `
 
+const Contact = () => {
+    const navigate = useNavigate();
+
     return (
-        <Contact>
+        <StyledContact>
             <FlexColumn justifyContent={"center"} alignItems={"center"}>
                 <h1>Contact</h1>
                 <Email>
@@ -69,7 +70,7 @@ const Contact = () => {
                     </ButtonDinamico> 
                 </FlexRow>
             </FlexColumn>
-        </Contact>
+        </StyledContact>
         );
 }
 

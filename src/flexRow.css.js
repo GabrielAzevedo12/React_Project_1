@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-const FlexRow = ( props ) => {
-    
-    const FlexRow = styled.div`
+const StyledFlexRow = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: 
@@ -14,11 +12,12 @@ const FlexRow = ( props ) => {
     background-color: black;
     color: rgb(125, 125, 158);
     `
-
+    
+const FlexRow = ( props ) => {    
     return (
-        <FlexRow justifyContent={props.justifyContent} alignItems={props.alignItems} maxHeight={props.maxHeight} maxWidth={props.maxWidth} minHeight={props.minHeight} minWidth={props.minWidth} Height={props.Height} Width={props.Width} className={ props.className || ""}>
+        <StyledFlexRow justifyContent={props.justifyContent} alignItems={props.alignItems} maxHeight={props.maxHeight} maxWidth={props.maxWidth} minHeight={props.minHeight} minWidth={props.minWidth} Height={props.Height} Width={props.Width} className={ props.className || ""}>
             {props.children}
-        </FlexRow>
+        </StyledFlexRow>
         );
 }
 

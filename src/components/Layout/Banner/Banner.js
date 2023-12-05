@@ -8,15 +8,13 @@ import Banner3 from "./components/Banner3/Banner3";
 import Banner4 from "./components/Banner4/Banner4";
 import Banner5 from "./components/Banner5/Banner5";
 import BannerGeral from "./BannerGeral/BannerGeral";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import { flexColumn as displayColumn } from "../../../propsGerais.css.js";
 
-const Banner = ( props ) => { 
-
-  const Banner = styled.div`
+const BannerContainer = styled.div`
     display: grid;
     grid-template-areas:
-    ${ props => `
+    ${ props => css`
     "${props.ItemNull} ${props.ItemNull} ${props.ItemNull} ${props.ItemNull} ${props.ItemNull} ${props.ItemNull}"
     "${props.Item1} ${props.Item1} ${props.Item1} ${props.Item1} ${props.Item1} ${props.Item1}"
     "${props.Item3} ${props.Item2} ${props.Item2} ${props.Item2} ${props.Item2} ${props.Item2}"
@@ -28,7 +26,7 @@ const Banner = ( props ) => {
     @media (max-width: 760px) {
     display: grid;
     grid-template-areas:
-    ${ props => `
+    ${ props => css`
     "${props.ItemNull}"
     "${props.Item1}"
     "${props.Item2}"
@@ -42,15 +40,17 @@ const Banner = ( props ) => {
       ${displayColumn}
       }`
 
+const Banner = ( props ) => { 
+
     return ( 
-      <Banner ItemNull="BannerBlank" Item1="Banner1" Item2="Banner2" Item3="Banner3" Item4="Banner4" Item5="Banner5">
+      <BannerContainer ItemNull="BannerBlank" Item1="Banner1" Item2="Banner2" Item3="Banner3" Item4="Banner4" Item5="Banner5">
             <BannerGeral BannerName="BannerBlank" />
             <Banner1/>
             <Banner2/>
             <Banner3/>
             <Banner4/>
             <Banner5/>
-      </Banner>
+      </BannerContainer>
         );
 }
 
