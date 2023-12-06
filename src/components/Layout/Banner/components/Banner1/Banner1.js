@@ -64,9 +64,29 @@ StyledText = styled(Text)`
   animation: ${rotate} 2s cubic-bezier(.79,2.01,.83,.67) infinite;
   `;
 
-const Banner1 = () => { 
+//class
+const Class_subBanner = class {
 
-  const [states, updateStates ] = useReducer(reducer, {
+  constructor (over, animation, posiçaoInicial, posiçaoAtual) {
+
+          this.posiçao = {
+              inicial : {
+                  x: posiçaoInicial ? posiçaoInicial : undefined
+              },
+              atual : {
+                  x: posiçaoAtual ? posiçaoAtual : undefined
+              }
+          };
+          this.animation = animation;
+          this.over = over
+
+        }
+
+}
+
+const Banner1 = () => { 
+  
+  const [states, updateStates ] = useReducer(reducer, { 
     "posiçaoInicial_subBanner3": false,
     "posiçaoInicial_subBanner2": false,
     "posiçaoInicial_subBanner1": false,
@@ -94,11 +114,13 @@ const Banner1 = () => {
         load: true
       })
       setTimeout(() => {
-        updateStates({ loadText: true, subBanner_animation: true, load: false })
+        updateStates({ 
+          loadText: true,
+          subBanner_animation: true,
+          load: false })
       }, 1000);
-      //console.log(states)
-    }, [] )
-   /*animation: ${MovLeft_subBanner} 90s cubic-bezier(.79,2.01,.83,.67) infinite ;*/
+    }, []);
+
    const 
    SubBanner_onMouseOver = (e) => {
     updateStates(

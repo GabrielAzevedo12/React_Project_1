@@ -1,6 +1,6 @@
 import { keyframes } from "styled-components"
 
-const LimiteDeslocamento = -1*window.innerWidth*2 + "px";
+const LimiteDeslocamento = -1*window.outerWidth*2 + "px";
 
 const MovLeft_subBanner = keyframes`
 0% {
@@ -15,7 +15,7 @@ const MovLeft_subBanner = keyframes`
 `
 const MovLeft_subBanner_posiçaoAtual  = (posiçaoAtual) => {
     const 
-    LimiteDeslocamento = -1*window.innerWidth*2 + "px",
+    LimiteDeslocamento = -1*window.outerWidth*2 + "px",
     MovLeft_subBanner = keyframes`
     0% {
       left: ${ posiçaoAtual || 0 } ;
