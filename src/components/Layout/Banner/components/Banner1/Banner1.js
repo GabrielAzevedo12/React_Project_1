@@ -3,7 +3,8 @@ import BannerGeral from "../../BannerGeral/BannerGeral";
 import SubBanner from "../../subBanner/subBanner";
 import Text from "../../../Text/Text";
 import { AiOutlineLoading } from "react-icons/ai";
-//import { MovLeft_subBanner } from "./css/MovLeft_subBanner.css.js"
+import { MovLeft_subBanner_posiçaoAtual } from "./css/MovLeft_subBanner.css.js"
+import { Animation_Banner1_AlterarDimensoes } from "./css/Animation_Banner1_AlterarDimensoes.css.js";
 import { rotate } from "./css/rotate.css.js"
 import styled, { css, keyframes } from "styled-components";
 import './css/Banner1.css';
@@ -13,23 +14,6 @@ import './css/Banner1_subBanner3.css'
 import { $ } from "../../../../funçoes/funçoes.js";
 
 // Animaçoes
-const MovLeft_subBanner_posiçaoAtual  = (posiçaoAtual) => {
-  const 
-  LimiteDeslocamento = -1*window.innerWidth*2 + "px",
-  MovLeft_subBanner = keyframes`
-  0% {
-    left: ${ posiçaoAtual || 0 } ;
-  }
-  50% {
-    left: ${LimiteDeslocamento} ;
-  }
-  100% {
-    left: 0 ;
-  }
-  `
-  return MovLeft_subBanner ;
-}
-
 // useReducer
 const reducer = (stateAtual, stateUp) => {
   return { ...stateAtual, ...stateUp }
@@ -45,6 +29,18 @@ min-height: 30vh;
 --heightBanner1: 70vh;
 height: var(--heightBanner1) ;
 background-color: rgb(43, 32, 53);
+z-index: 10;
+
+&:hover { 
+  ${ 
+     props => props.OverSubBanner ?
+     css`
+     animation: ${ Animation_Banner1_AlterarDimensoes(props.HeightAtual + "px", `calc(var(--heightBanner1) + 10vh)` ) } 1s linear ;
+     height: calc(var(--heightBanner1) + 10vh) ;
+     ` :
+     ""
+    }
+}
     `,
 
 StyledSubBanner = 
@@ -72,6 +68,10 @@ const Banner1 = () => {
     posiçaoAtual_subBanner1: false,
     posiçaoAtual_subBanner2: false,
     posiçaoAtual_subBanner3: false,
+    HeightAtual_subBanner1: undefined,
+    HeightAtual_subBanner2: undefined,
+    HeightAtual_subBanner3: undefined,
+    HeightAtual_Banner1: undefined,
     subBanner_animation: false,
     OverSubBanner: false,
     loadText: false
@@ -87,9 +87,10 @@ const Banner1 = () => {
       var
       d_e = element.getBoundingClientRect();
       states["posiçaoInicial_subBanner"+i] = d_e.x ;
+     //states["Height_subBanner"+i] = d_e.height ;
       i++;
       }   
-    console.log(states);  
+    states.HeightAtual_Banner1 = parseInt( $("#Banner1").getBoundingClientRect().height ) ;
   })
    /*animation: ${MovLeft_subBanner} 90s cubic-bezier(.79,2.01,.83,.67) infinite ;*/
    const SubBanner_onMouseOver = (e) => {
@@ -97,10 +98,11 @@ const Banner1 = () => {
     for ( const element of $("#Banner1").childNodes) {
     var d_e = element.getBoundingClientRect();
     states["posiçaoAtual_subBanner"+i] = ( d_e.x - states["posiçaoInicial_subBanner"+i] ) + "px" ;
+    //states["Height_subBanner"+i] = d_e.height ;
     i++;
     }
-    console.log(states);  
-    updateStates({OverSubBanner: true})
+    updateStates({OverSubBanner: true});
+    states.HeightAtual_Banner1 = parseInt( $("#Banner1").getBoundingClientRect().height );
    }
 
    const SubBanner_onMouseOut = (e) => {
@@ -108,7 +110,11 @@ const Banner1 = () => {
    }
 
     return (
-        <StyledBanner1 BannerName="Banner1" className="flex-row flex-nowrap">
+        <StyledBanner1 
+        BannerName="Banner1"
+        className="flex-row flex-nowrap"
+        HeightAtual={states.HeightAtual_Banner1}
+        OverSubBanner={states.OverSubBanner}>
         <StyledSubBanner 
         BannerPai="Banner1" 
         indexItem={1} 
@@ -117,7 +123,8 @@ const Banner1 = () => {
         onMouseOut={SubBanner_onMouseOut} 
         animation={states.subBanner_animation}
         OverSubBanner={states.OverSubBanner}
-        left={states.posiçaoAtual_subBanner1}>
+        left={states.posiçaoAtual_subBanner1}
+        HeightAtual={states.HeightAtual_subBanner1}>
         {
                 states.loadText ?
                 <Text TextName="subBanner1_Text" typeText="h1"> 
@@ -136,7 +143,8 @@ const Banner1 = () => {
         onMouseOut={SubBanner_onMouseOut}
         animation={states.subBanner_animation}
         OverSubBanner={states.OverSubBanner}
-        left={states.posiçaoAtual_subBanner2}>
+        left={states.posiçaoAtual_subBanner2}
+        HeightAtual={states.HeightAtual_subBanner2}>
         {
                 states.loadText ?
                 <Text TextName="subBanner2_Text" typeText="h1"> 
@@ -155,7 +163,8 @@ const Banner1 = () => {
         onMouseOut={SubBanner_onMouseOut}
         animation={states.subBanner_animation}
         OverSubBanner={states.OverSubBanner}
-        left={states.posiçaoAtual_subBanner3}>
+        left={states.posiçaoAtual_subBanner3}
+        HeightAtual={states.HeightAtual_subBanner3}>
         {
                 states.loadText ?
                 <Text TextName="subBanner3_Text" typeText="h1"> 
@@ -166,7 +175,7 @@ const Banner1 = () => {
                 </StyledText>
         }
         </StyledSubBanner>
-      </StyledBanner1> 
+      </StyledBanner1>  
       
         );
 }
