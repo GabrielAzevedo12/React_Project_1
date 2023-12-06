@@ -1,3 +1,4 @@
+/*
 #Banner1 {
     grid-area: Banner1;
     min-width: 100vw;
@@ -10,6 +11,7 @@
 .Banner1_subBanner {
     background-color: rgb(149, 129, 168);
 }
+*/
 /*
 #Banner1:hover {
     animation: Animation_Banner1_AlterarDimensoes1 1s cubic-bezier(.52,1.51,.83,.67);

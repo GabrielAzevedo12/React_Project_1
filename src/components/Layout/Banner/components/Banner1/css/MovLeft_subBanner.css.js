@@ -13,4 +13,5 @@ const MovLeft_subBanner = keyframes`
     left: 0 ;
 }
 `
+
 export { MovLeft_subBanner, LimiteDeslocamento }
