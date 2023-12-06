@@ -8,6 +8,7 @@ import Text from "../../Layout/Text/Text";
 import { flexRow } from "../../../propsGerais.css.js";
 import ButtonDinamico from "../../Layout/ButtonDinamico/ButtonDinamico.js";
 import FlexRow from "../../../flexRow.css.js";
+import { Link } from "react-router-dom";
 
 const StyledContact = styled.div`
     & h1 {
