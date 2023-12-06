@@ -81,14 +81,8 @@ const Banner1 = () => {
   })
 
   setTimeout(() => {
-    updateStates({ loadText: true, subBanner_animation: true })
+    updateStates({ loadText: true, subBanner_animation: true, load: false })
   }, 1000);
-  
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      updateStates({ load: false })
-    }, 1000);
-  })
   
   useEffect(
     () => {
