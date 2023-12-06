@@ -79,10 +79,6 @@ const Banner1 = () => {
     loadText: false,
     load: false
   })
-
-  setTimeout(() => {
-    updateStates({ loadText: true, subBanner_animation: true, load: false })
-  }, 1000);
   
   useEffect(
     () => {
@@ -97,7 +93,10 @@ const Banner1 = () => {
         HeightAtual_Banner1 : parseInt( $("#Banner1").getBoundingClientRect().height ),
         load: true
       })
-      console.log(states)
+      setTimeout(() => {
+        updateStates({ loadText: true, subBanner_animation: true, load: false })
+      }, 1000);
+      //console.log(states)
     }, [] )
    /*animation: ${MovLeft_subBanner} 90s cubic-bezier(.79,2.01,.83,.67) infinite ;*/
    const 
