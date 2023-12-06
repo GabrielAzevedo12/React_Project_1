@@ -49,7 +49,7 @@ StyledSubBanner =
   background-color: rgb(149, 129, 168);
   ${
   props => props.animation && !props.OverSubBanner ? 
-  css`animation: ${MovLeft_subBanner_posiçaoAtual(props.left)} 90s linear infinite ;` :
+  css`animation: ${MovLeft_subBanner_posiçaoAtual(props.left)} 60s linear infinite ;` :
   css`left: ${props.left}` 
   }
   `,
@@ -68,9 +68,6 @@ const Banner1 = () => {
     posiçaoAtual_subBanner1: false,
     posiçaoAtual_subBanner2: false,
     posiçaoAtual_subBanner3: false,
-    HeightAtual_subBanner1: undefined,
-    HeightAtual_subBanner2: undefined,
-    HeightAtual_subBanner3: undefined,
     HeightAtual_Banner1: undefined,
     subBanner_animation: false,
     OverSubBanner: false,
