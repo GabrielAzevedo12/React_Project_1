@@ -4,7 +4,5 @@
 }
 
 .subBanner:hover {
-    z-index: 10;
-    min-height: 110%;
-    min-width: 110%;
+
 }

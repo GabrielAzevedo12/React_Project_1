@@ -10,6 +10,7 @@ import './css/Banner1.css';
 import './css/Banner1_subBanner1.css'
 import './css/Banner1_subBanner2.css'
 import './css/Banner1_subBanner3.css'
+import { $ } from "../../../../funçoes/funçoes.js";
 
 const reducer = (stateAtual, stateUp) => {
   return { ...stateAtual, ...stateUp }
@@ -18,11 +19,10 @@ const reducer = (stateAtual, stateUp) => {
 let StyledSubBanner = 
   styled(SubBanner)`
   position: relative;
-  animation:
   ${
   props => props.animation && !props.OverSubBanner ? 
-  css`${props.animation} 90s linear infinite ;` :
-  `` 
+  css`animation: ${MovLeft_subBanner} 90s linear infinite ;` :
+  css`left: ${props.left}` 
   }
   `
 
@@ -34,28 +34,45 @@ const StyledText = styled(Text)`
 const Banner1 = () => { 
 
   const [states, updateStates ] = useReducer(reducer, {
-    subBanner1_left: false,
-    subBanner2_left: false,
-    subBanner3_left: false,
-    subBanner_animation: MovLeft_subBanner,
+    posiçaoInicial_subBanner3: false,
+    posiçaoInicial_subBanner2: false,
+    posiçaoInicial_subBanner1: false,
+    posiçaoAtual_subBanner1: false,
+    posiçaoAtual_subBanner2: false,
+    posiçaoAtual_subBanner3: false,
+    subBanner_animation: false,
     OverSubBanner: false,
     loadText: false
   })
 
   setTimeout(() => {
-    updateStates({ loadText: true })
+    updateStates({ loadText: true, subBanner_animation: true })
   }, 5000);
 
+  window.addEventListener("load",() => {
+    var i = 1;
+    for ( const element of $("#Banner1").childNodes) {
+      var
+      d_e = element.getBoundingClientRect();
+      states["posiçaoInicial_subBanner"+i] = d_e.x ;
+      i++;
+      }   
+    console.log(states);  
+  })
    /*animation: ${MovLeft_subBanner} 90s cubic-bezier(.79,2.01,.83,.67) infinite ;*/
    const SubBanner_onMouseOver = (e) => {
-    for ( const element of e.target.parentElement.childNodes) {
-    var
-    d_e = element.getBoundingClientRect(),
-    d_p = element.parentElement.getBoundingClientRect() ;
-    element.style.left = (d_p.x - d_e.x) + "px" ;
-
+    var i = 1;
+    for ( const element of $("#Banner1").childNodes) {
+    var d_e = element.getBoundingClientRect();
+    states["posiçaoAtual_subBanner"+i] = (states["posiçaoInicial_subBanner"+i] - d_e.x) + "px" ;
+    i++;
     }
+    console.log(states);  
     updateStates({OverSubBanner: true})
+   }
+
+   const SubBanner_onMouseOut = (e) => {
+    updateStates({OverSubBanner: false})
    }
 
     return (
@@ -65,8 +82,10 @@ const Banner1 = () => {
         indexItem={1} 
         className="center" 
         onMouseOver={SubBanner_onMouseOver} 
+        onMouseOut={SubBanner_onMouseOut} 
         animation={states.subBanner_animation}
-        OverSubBanner={states.OverSubBanner}>
+        OverSubBanner={states.OverSubBanner}
+        left={states.posiçaoAtual_subBanner1}>
         {
                 states.loadText ?
                 <Text TextName="subBanner1_Text" typeText="h1"> 
@@ -82,8 +101,10 @@ const Banner1 = () => {
         indexItem={2} 
         className="" 
         onMouseOver={SubBanner_onMouseOver} 
+        onMouseOut={SubBanner_onMouseOut}
         animation={states.subBanner_animation}
-        OverSubBanner={states.OverSubBanner}>
+        OverSubBanner={states.OverSubBanner}
+        left={states.posiçaoAtual_subBanner2}>
         {
                 states.loadText ?
                 <Text TextName="subBanner1_Text" typeText="h1"> 
@@ -99,8 +120,10 @@ const Banner1 = () => {
         indexItem={3} 
         className="" 
         onMouseOver={SubBanner_onMouseOver} 
+        onMouseOut={SubBanner_onMouseOut}
         animation={states.subBanner_animation}
-        OverSubBanner={states.OverSubBanner}>
+        OverSubBanner={states.OverSubBanner}
+        left={states.posiçaoAtual_subBanner3}>
         {
                 states.loadText ?
                 <Text TextName="subBanner1_Text" typeText="h1"> 

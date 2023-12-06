@@ -10,7 +10,7 @@
 .Banner1_subBanner {
     background-color: rgb(149, 129, 168);
 }
-
+/*
 #Banner1:hover {
     animation: Animation_Banner1_AlterarDimensoes1 1s cubic-bezier(.52,1.51,.83,.67);
     height: calc(var(--heightBanner1) + 10vh);
@@ -38,3 +38,4 @@
         height: var(--heightBanner1) ;
     }
   }
+  */

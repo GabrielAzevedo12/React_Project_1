@@ -21,7 +21,6 @@ const BannerContainer = styled.div`
     "${props.Item3} ${props.Item4} ${props.Item4} ${props.Item4} ${props.Item4} ${props.Item4}"
     "${props.Item5} ${props.Item4} ${props.Item4} ${props.Item4} ${props.Item4} ${props.Item4}"` };
     gap: 10px;
-    padding: 10px;
 
     @media (max-width: 760px) {
     display: grid;
