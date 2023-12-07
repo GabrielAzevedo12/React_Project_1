@@ -111,13 +111,13 @@ const Banner1 = () => {
         }   
       updateStates({ 
         HeightAtual_Banner1 : parseInt( $("#Banner1").getBoundingClientRect().height ),
-        load: true
+        load: states.load ? states.load : !states.load
       })
       setTimeout(() => {
         updateStates({ 
-          loadText: true,
-          subBanner_animation: true,
-          load: false })
+          loadText: !states.loadText,
+          subBanner_animation: !states.subBanner_animation,
+          load: states.load ? !states.load : states.load })
       }, 1000);
     }, []);
 
@@ -128,14 +128,14 @@ const Banner1 = () => {
         posiçaoAtual_subBanner : ( $("#Banner1_subBanner1").getBoundingClientRect().x - states.posiçaoInicial_subBanner1 ) + "px" ||
         ( $("#Banner1_subBanner2").getBoundingClientRect().x - states.posiçaoInicial_subBanner2 ) + "px" ||
         ( $("#Banner1_subBanner3").getBoundingClientRect().x - states.posiçaoInicial_subBanner3 ) + "px" ,
-        OverSubBanner: true,
+        OverSubBanner: states.OverSubBanner ? states.OverSubBanner : !states.OverSubBanner,
         HeightAtual_Banner1: parseInt( $("#Banner1").getBoundingClientRect().height )
       }
     )
    },
    
    SubBanner_onMouseOut = (e) => {
-    updateStates({OverSubBanner: false})
+    updateStates({OverSubBanner: states.OverSubBanner ? !states.OverSubBanner : states.OverSubBanner})
    }
 
     return (
